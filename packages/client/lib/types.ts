@@ -4,7 +4,7 @@ import type Connection = require('../../../node_modules/libp2p-interfaces/dist/s
 import type { MuxedStream } from '../../../node_modules/libp2p-interfaces/dist/src/stream-muxer/types'
 import type { Peer } from './net/peer'
 import type { Server } from './net/server'
-import type { Block, BlockHeader } from '@ethereumjs/block'
+import type { Block, BlockHeader } from '@nomicfoundation/block'
 import type { Multiaddr } from 'multiaddr'
 
 /**

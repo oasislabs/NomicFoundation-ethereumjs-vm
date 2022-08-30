@@ -1,5 +1,5 @@
 {
-  "name": "@ethereumjs/tx",
+  "name": "@nomicfoundation/tx",
   "version": "4.0.0-rc.1",
   "description": "A simple module for creating, manipulating and signing Ethereum transactions",
   "keywords": [
@@ -42,7 +42,6 @@
     "lint": "../../config/cli/lint.sh",
     "lint:diff": "../../config/cli/lint-diff.sh",
     "lint:fix": "../../config/cli/lint-fix.sh",
-    "prepublishOnly": "../../config/cli/prepublish.sh",
     "tape": "tape -r ts-node/register",
     "test": "npm run test:node && npm run test:browser",
     "test:browser": "karma start karma.conf.js",
@@ -50,9 +49,9 @@
     "tsc": "../../config/cli/ts-compile.sh"
   },
   "dependencies": {
-    "@ethereumjs/common": "3.0.0-rc.1",
-    "@ethereumjs/rlp": "4.0.0-rc.1",
-    "@ethereumjs/util": "8.0.0-rc.1",
+    "@nomicfoundation/common": "3.0.0-rc.1",
+    "@nomicfoundation/rlp": "4.0.0-rc.1",
+    "@nomicfoundation/util": "8.0.0-rc.1",
     "ethereum-cryptography": "^1.1.2"
   },
   "devDependencies": {

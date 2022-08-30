@@ -1,7 +1,7 @@
-import { Block, BlockHeader, getDifficulty, valuesArrayToHeaderData } from '@ethereumjs/block'
-import { Hardfork } from '@ethereumjs/common'
-import { RLP } from '@ethereumjs/rlp'
-import { TransactionFactory } from '@ethereumjs/tx'
+import { Block, BlockHeader, getDifficulty, valuesArrayToHeaderData } from '@nomicfoundation/block'
+import { Hardfork } from '@nomicfoundation/common'
+import { RLP } from '@nomicfoundation/rlp'
+import { TransactionFactory } from '@nomicfoundation/tx'
 import {
   arrToBufArr,
   bigIntToBuffer,
@@ -9,18 +9,18 @@ import {
   bufferToBigInt,
   bufferToInt,
   intToBuffer,
-} from '@ethereumjs/util'
-import { encodeReceipt } from '@ethereumjs/vm/dist/runBlock'
+} from '@nomicfoundation/util'
+import { encodeReceipt } from '@nomicfoundation/vm/dist/runBlock'
 
 import { Protocol } from './protocol'
 
 import type { Chain } from '../../blockchain'
 import type { TxReceiptWithType } from '../../execution/receipt'
 import type { Message, ProtocolOptions } from './protocol'
-import type { BlockBodyBuffer, BlockBuffer, BlockHeaderBuffer } from '@ethereumjs/block'
-import type { TypedTransaction } from '@ethereumjs/tx'
-import type { BigIntLike } from '@ethereumjs/util'
-import type { PostByzantiumTxReceipt, PreByzantiumTxReceipt, TxReceipt } from '@ethereumjs/vm'
+import type { BlockBodyBuffer, BlockBuffer, BlockHeaderBuffer } from '@nomicfoundation/block'
+import type { TypedTransaction } from '@nomicfoundation/tx'
+import type { BigIntLike } from '@nomicfoundation/util'
+import type { PostByzantiumTxReceipt, PreByzantiumTxReceipt, TxReceipt } from '@nomicfoundation/vm'
 
 interface EthProtocolOptions extends ProtocolOptions {
   /* Blockchain */

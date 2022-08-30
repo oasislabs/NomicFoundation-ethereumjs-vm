@@ -5,7 +5,7 @@ import { BlockFetcher } from './blockfetcher'
 
 import type { Skeleton } from '../skeleton'
 import type { BlockFetcherOptions, JobTask } from './blockfetcherbase'
-import type { Block } from '@ethereumjs/block'
+import type { Block } from '@nomicfoundation/block'
 
 interface ReverseBlockFetcherOptions extends BlockFetcherOptions {
   /** Skeleton */

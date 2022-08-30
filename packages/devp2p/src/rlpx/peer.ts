@@ -1,5 +1,5 @@
-import { RLP } from '@ethereumjs/rlp'
-import { arrToBufArr, bufArrToArr, isFalsy, isTruthy } from '@ethereumjs/util'
+import { RLP } from '@nomicfoundation/rlp'
+import { arrToBufArr, bufArrToArr, isFalsy, isTruthy } from '@nomicfoundation/util'
 import BufferList = require('bl')
 import { debug as createDebugLogger } from 'debug'
 import { EventEmitter } from 'events'
@@ -11,7 +11,7 @@ import { buffer2int, devp2pDebug, formatLogData, int2buffer } from '../util'
 import { ECIES } from './ecies'
 
 import type { ETH, LES } from '..'
-import type { Common } from '@ethereumjs/common'
+import type { Common } from '@nomicfoundation/common'
 import type { Debugger } from 'debug'
 import type { Socket } from 'net'
 

@@ -1,8 +1,8 @@
 import { randomBytes } from 'crypto'
-import { Block, BlockHeader } from '@ethereumjs/block'
-import { Chain, Common, Hardfork } from '@ethereumjs/common'
-import { TypedTransaction } from '@ethereumjs/tx'
-import { isTruthy } from '@ethereumjs/util'
+import { Block, BlockHeader } from '@nomicfoundation/block'
+import { Chain, Common, Hardfork } from '@nomicfoundation/common'
+import { TypedTransaction } from '@nomicfoundation/tx'
+import { isTruthy } from '@nomicfoundation/util'
 import chalk from 'chalk'
 import ms from 'ms'
 

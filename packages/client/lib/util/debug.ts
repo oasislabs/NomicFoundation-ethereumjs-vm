@@ -1,7 +1,7 @@
 import { DataDirectory } from '..'
 
 import type { VMExecution } from '../execution'
-import type { Block } from '@ethereumjs/block'
+import type { Block } from '@nomicfoundation/block'
 
 /**
  * Generates a code snippet which can be used to replay an erraneous block
@@ -24,12 +24,12 @@ export async function debugCodeReplayBlock(execution: VMExecution, block: Block)
  */
 
 import { Level } from 'level';
-import { Common } from '@ethereumjs/common'
-import { Block } from '@ethereumjs/block'
+import { Common } from '@nomicfoundation/common'
+import { Block } from '@nomicfoundation/block'
 import { VM }  from './lib'
-import { Trie } from '@ethereumjs/trie'
+import { Trie } from '@nomicfoundation/trie'
 import { DefaultStateManager } from './lib/state'
-import { Blockchain } from '@ethereumjs/blockchain'
+import { Blockchain } from '@nomicfoundation/blockchain'
 
 const main = async () => {
   const common = new Common({ chain: '${execution.config.execCommon.chainName()}', hardfork: '${

@@ -1,5 +1,5 @@
 {
-  "name": "@ethereumjs/rlp",
+  "name": "@nomicfoundation/rlp",
   "version": "4.0.0-rc.1",
   "description": "Recursive Length Prefix Encoding Module",
   "keywords": [
@@ -41,7 +41,6 @@
     "lint": "../../config/cli/lint.sh",
     "lint:diff": "../../config/cli/lint-diff.sh",
     "lint:fix": "../../config/cli/lint-fix.sh",
-    "prepublishOnly": "../../config/cli/prepublish.sh",
     "tape": "tape -r ts-node/register",
     "test": "npm run test:node && npm run test:browser",
     "test:browser": "karma start karma.conf.js",

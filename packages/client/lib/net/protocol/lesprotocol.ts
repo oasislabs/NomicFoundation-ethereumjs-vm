@@ -1,18 +1,18 @@
-import { BlockHeader } from '@ethereumjs/block'
+import { BlockHeader } from '@nomicfoundation/block'
 import {
   bigIntToBuffer,
   bufferToBigInt,
   bufferToInt,
   intToBuffer,
   isTruthy,
-} from '@ethereumjs/util'
+} from '@nomicfoundation/util'
 
 import { Protocol } from './protocol'
 
 import type { Chain } from '../../blockchain'
 import type { FlowControl } from './flowcontrol'
 import type { Message, ProtocolOptions } from './protocol'
-import type { BlockHeaderBuffer } from '@ethereumjs/block'
+import type { BlockHeaderBuffer } from '@nomicfoundation/block'
 
 export interface LesProtocolOptions extends ProtocolOptions {
   /* Blockchain */

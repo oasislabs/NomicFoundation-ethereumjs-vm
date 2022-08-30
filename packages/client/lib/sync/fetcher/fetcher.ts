@@ -1,4 +1,4 @@
-import { isTruthy } from '@ethereumjs/util'
+import { isTruthy } from '@nomicfoundation/util'
 import { debug as createDebugLogger } from 'debug'
 import Heap = require('qheap')
 import { Readable, Writable } from 'stream'

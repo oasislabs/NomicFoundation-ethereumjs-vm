@@ -1,6 +1,6 @@
-import { Account, isFalsy, isTruthy } from '@ethereumjs/util'
+import { Account, isFalsy, isTruthy } from '@nomicfoundation/util'
 
-import type { Address } from '@ethereumjs/util'
+import type { Address } from '@nomicfoundation/util'
 
 const Tree = require('functional-red-black-tree')
 

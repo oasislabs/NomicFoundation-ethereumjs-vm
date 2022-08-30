@@ -3,12 +3,12 @@ import {
   DBSetBlockOrHeader,
   DBSetHashToNumber,
   DBSetTD,
-} from '@ethereumjs/blockchain/dist/db/helpers'
-import { ConsensusType, Hardfork } from '@ethereumjs/common'
-import { DefaultStateManager } from '@ethereumjs/statemanager'
-import { Trie } from '@ethereumjs/trie'
-import { bufferToHex, isFalsy, isTruthy } from '@ethereumjs/util'
-import { VM } from '@ethereumjs/vm'
+} from '@nomicfoundation/blockchain/dist/db/helpers'
+import { ConsensusType, Hardfork } from '@nomicfoundation/common'
+import { DefaultStateManager } from '@nomicfoundation/statemanager'
+import { Trie } from '@nomicfoundation/trie'
+import { bufferToHex, isFalsy, isTruthy } from '@nomicfoundation/util'
+import { VM } from '@nomicfoundation/vm'
 
 import { Event } from '../types'
 import { short } from '../util'
@@ -19,8 +19,8 @@ import { LevelDB } from './level'
 import { ReceiptsManager } from './receipt'
 
 import type { ExecutionOptions } from './execution'
-import type { Block } from '@ethereumjs/block'
-import type { RunBlockOpts, TxReceipt } from '@ethereumjs/vm'
+import type { Block } from '@nomicfoundation/block'
+import type { RunBlockOpts, TxReceipt } from '@nomicfoundation/vm'
 
 export class VMExecution extends Execution {
   public vm: VM

@@ -1,4 +1,4 @@
-import { Blockchain } from '@ethereumjs/blockchain'
+import { Blockchain } from '@nomicfoundation/blockchain'
 import { MemoryLevel } from 'memory-level'
 
 import { Config } from '../../lib/config'
@@ -9,7 +9,7 @@ import { MockChain } from './mocks/mockchain'
 import { MockServer } from './mocks/mockserver'
 
 import type { SyncMode } from '../../lib/config'
-import type { Common } from '@ethereumjs/common'
+import type { Common } from '@nomicfoundation/common'
 
 interface SetupOptions {
   location?: string

@@ -1,4 +1,4 @@
-import { isTruthy } from '@ethereumjs/util'
+import { isTruthy } from '@nomicfoundation/util'
 import { debug as createDebugLogger } from 'debug'
 import * as dgram from 'dgram'
 import { EventEmitter } from 'events'

@@ -1,5 +1,5 @@
-import { Common, Hardfork } from '@ethereumjs/common'
-import { genPrivateKey } from '@ethereumjs/devp2p'
+import { Common, Hardfork } from '@nomicfoundation/common'
+import { genPrivateKey } from '@nomicfoundation/devp2p'
 import { Level } from 'level'
 
 import { getLogger } from './logging'
@@ -9,8 +9,8 @@ import { parseTransports } from './util'
 
 import type { Logger } from './logging'
 import type { EventBusType } from './types'
-import type { Address } from '@ethereumjs/util'
-import type { VM } from '@ethereumjs/vm'
+import type { Address } from '@nomicfoundation/util'
+import type { VM } from '@nomicfoundation/vm'
 import type { Multiaddr } from 'multiaddr'
 
 export enum DataDirectory {

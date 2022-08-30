@@ -1,4 +1,4 @@
-import { isTruthy, zeros } from '@ethereumjs/util'
+import { isTruthy, zeros } from '@nomicfoundation/util'
 import { keccak256 } from 'ethereum-cryptography/keccak'
 
 const BYTE_SIZE = 256

@@ -1,7 +1,7 @@
 /**
  * @module util
  */
-import { isFalsy } from '@ethereumjs/util'
+import { isFalsy } from '@nomicfoundation/util'
 import { platform } from 'os'
 
 import { version as packageVersion } from '../../package.json'

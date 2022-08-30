@@ -1,5 +1,5 @@
-import { DPT as Devp2pDPT, RLPx as Devp2pRLPx } from '@ethereumjs/devp2p'
-import { isFalsy, isTruthy } from '@ethereumjs/util'
+import { DPT as Devp2pDPT, RLPx as Devp2pRLPx } from '@nomicfoundation/devp2p'
+import { isFalsy, isTruthy } from '@nomicfoundation/util'
 
 import { Event } from '../../types'
 import { RlpxPeer } from '../peer/rlpxpeer'
@@ -7,7 +7,7 @@ import { RlpxPeer } from '../peer/rlpxpeer'
 import { Server } from './server'
 
 import type { ServerOptions } from './server'
-import type { Peer as Devp2pRLPxPeer } from '@ethereumjs/devp2p'
+import type { Peer as Devp2pRLPxPeer } from '@nomicfoundation/devp2p'
 
 export interface RlpxServerOptions extends ServerOptions {
   /* List of supported clients */

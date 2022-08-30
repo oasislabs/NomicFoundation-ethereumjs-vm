@@ -1,4 +1,4 @@
-import { bufferToHex } from '@ethereumjs/util'
+import { bufferToHex } from '@nomicfoundation/util'
 
 import { getClientVersion } from '../../util'
 import { middleware } from '../validation'

@@ -1,5 +1,5 @@
-import { RLP } from '@ethereumjs/rlp'
-import { arrToBufArr } from '@ethereumjs/util'
+import { RLP } from '@nomicfoundation/rlp'
+import { arrToBufArr } from '@nomicfoundation/util'
 
 import { isTerminator } from '../../util/hex'
 import { bufferToNibbles } from '../../util/nibbles'

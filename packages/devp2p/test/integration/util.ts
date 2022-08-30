@@ -1,5 +1,5 @@
-import { Chain, Common, Hardfork } from '@ethereumjs/common'
-import { isTruthy } from '@ethereumjs/util'
+import { Chain, Common, Hardfork } from '@nomicfoundation/common'
+import { isTruthy } from '@nomicfoundation/util'
 
 import { DPT, ETH, RLPx, genPrivateKey } from '../../src'
 import * as testdata from '../testdata.json'

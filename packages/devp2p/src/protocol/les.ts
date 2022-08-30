@@ -1,5 +1,5 @@
-import { RLP } from '@ethereumjs/rlp'
-import { arrToBufArr, bigIntToBuffer, bufArrToArr, isFalsy, isTruthy } from '@ethereumjs/util'
+import { RLP } from '@nomicfoundation/rlp'
+import { arrToBufArr, bigIntToBuffer, bufArrToArr, isFalsy, isTruthy } from '@nomicfoundation/util'
 import ms = require('ms')
 import * as snappy from 'snappyjs'
 

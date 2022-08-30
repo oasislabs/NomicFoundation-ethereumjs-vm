@@ -1,4 +1,4 @@
-import { isTruthy } from '@ethereumjs/util'
+import { isTruthy } from '@nomicfoundation/util'
 // eslint-disable-next-line implicit-dependencies/no-implicit, import/no-extraneous-dependencies
 import { keys } from 'libp2p-crypto'
 import { multiaddr } from 'multiaddr'

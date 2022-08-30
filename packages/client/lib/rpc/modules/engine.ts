@@ -1,9 +1,9 @@
-import { Block } from '@ethereumjs/block'
-import { Hardfork } from '@ethereumjs/common'
-import { RLP } from '@ethereumjs/rlp'
-import { Trie } from '@ethereumjs/trie'
-import { TransactionFactory } from '@ethereumjs/tx'
-import { bufferToHex, isFalsy, isTruthy, toBuffer, zeros } from '@ethereumjs/util'
+import { Block } from '@nomicfoundation/block'
+import { Hardfork } from '@nomicfoundation/common'
+import { RLP } from '@nomicfoundation/rlp'
+import { Trie } from '@nomicfoundation/trie'
+import { TransactionFactory } from '@nomicfoundation/tx'
+import { bufferToHex, isFalsy, isTruthy, toBuffer, zeros } from '@nomicfoundation/util'
 
 import { PendingBlock } from '../../miner'
 import { short } from '../../util'
@@ -16,9 +16,9 @@ import type { EthereumClient } from '../../client'
 import type { Config } from '../../config'
 import type { VMExecution } from '../../execution'
 import type { FullEthereumService } from '../../service'
-import type { HeaderData } from '@ethereumjs/block'
-import type { TypedTransaction } from '@ethereumjs/tx'
-import type { VM } from '@ethereumjs/vm'
+import type { HeaderData } from '@nomicfoundation/block'
+import type { TypedTransaction } from '@nomicfoundation/tx'
+import type { VM } from '@nomicfoundation/vm'
 
 export enum Status {
   ACCEPTED = 'ACCEPTED',

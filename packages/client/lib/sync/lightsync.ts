@@ -1,5 +1,5 @@
-import { Hardfork } from '@ethereumjs/common'
-import { isFalsy } from '@ethereumjs/util'
+import { Hardfork } from '@nomicfoundation/common'
+import { isFalsy } from '@nomicfoundation/util'
 
 import { Event } from '../types'
 import { short } from '../util'
@@ -9,7 +9,7 @@ import { Synchronizer } from './sync'
 
 import type { Peer } from '../net/peer/peer'
 import type { SynchronizerOptions } from './sync'
-import type { BlockHeader } from '@ethereumjs/block'
+import type { BlockHeader } from '@nomicfoundation/block'
 
 /**
  * Implements an ethereum light sync synchronizer

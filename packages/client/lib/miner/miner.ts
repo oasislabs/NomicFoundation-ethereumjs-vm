@@ -1,7 +1,7 @@
-import { BlockHeader } from '@ethereumjs/block'
-import { ConsensusType, Hardfork } from '@ethereumjs/common'
-import { Ethash } from '@ethereumjs/ethash'
-import { isFalsy, isTruthy } from '@ethereumjs/util'
+import { BlockHeader } from '@nomicfoundation/block'
+import { ConsensusType, Hardfork } from '@nomicfoundation/common'
+import { Ethash } from '@nomicfoundation/ethash'
+import { isFalsy, isTruthy } from '@nomicfoundation/util'
 import { MemoryLevel } from 'memory-level'
 
 import { Event } from '../types'
@@ -10,9 +10,9 @@ import type { Config } from '../config'
 import type { VMExecution } from '../execution'
 import type { FullEthereumService } from '../service'
 import type { FullSynchronizer } from '../sync'
-import type { CliqueConsensus } from '@ethereumjs/blockchain'
-import type { CliqueConfig } from '@ethereumjs/common'
-import type { Miner as EthashMiner, Solution } from '@ethereumjs/ethash'
+import type { CliqueConsensus } from '@nomicfoundation/blockchain'
+import type { CliqueConfig } from '@nomicfoundation/common'
+import type { Miner as EthashMiner, Solution } from '@nomicfoundation/ethash'
 
 export interface MinerOptions {
   /* Config */

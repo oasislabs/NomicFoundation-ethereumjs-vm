@@ -1,4 +1,4 @@
-import { isFalsy, isTruthy } from '@ethereumjs/util'
+import { isFalsy, isTruthy } from '@nomicfoundation/util'
 import * as chalk from 'chalk'
 import { createLogger, format, transports as wTransports } from 'winston'
 

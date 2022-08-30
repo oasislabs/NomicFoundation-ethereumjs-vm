@@ -1,4 +1,4 @@
-import { isFalsy, isTruthy } from '@ethereumjs/util'
+import { isFalsy, isTruthy } from '@nomicfoundation/util'
 import { debug as createDebugLogger } from 'debug'
 
 import { ENR } from './enr'

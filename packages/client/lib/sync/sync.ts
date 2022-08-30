@@ -1,5 +1,5 @@
-import { Hardfork } from '@ethereumjs/common'
-import { isFalsy, isTruthy } from '@ethereumjs/util'
+import { Hardfork } from '@nomicfoundation/common'
+import { isFalsy, isTruthy } from '@nomicfoundation/util'
 
 import { FlowControl } from '../net/protocol'
 import { Event } from '../types'

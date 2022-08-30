@@ -1,7 +1,7 @@
-import { isTruthy } from '@ethereumjs/util'
+import { isTruthy } from '@nomicfoundation/util'
 import { MemoryLevel } from 'memory-level'
 
-import type { BatchDBOp, DB } from '@ethereumjs/trie'
+import type { BatchDBOp, DB } from '@nomicfoundation/trie'
 import type { AbstractLevel } from 'abstract-level'
 
 const ENCODING_OPTS = { keyEncoding: 'buffer', valueEncoding: 'buffer' }

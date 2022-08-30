@@ -1,4 +1,4 @@
-import { addHexPrefix } from '@ethereumjs/util'
+import { addHexPrefix } from '@nomicfoundation/util'
 
 import { middleware } from '../validation'
 

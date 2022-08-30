@@ -2,10 +2,10 @@ import { randomBytes } from 'crypto'
 
 import type { Config } from '../config'
 import type { TxPool } from '../service/txpool'
-import type { Block, HeaderData } from '@ethereumjs/block'
-import type { TypedTransaction } from '@ethereumjs/tx'
-import type { TxReceipt, VM } from '@ethereumjs/vm'
-import type { BlockBuilder } from '@ethereumjs/vm/dist/buildBlock'
+import type { Block, HeaderData } from '@nomicfoundation/block'
+import type { TypedTransaction } from '@nomicfoundation/tx'
+import type { TxReceipt, VM } from '@nomicfoundation/vm'
+import type { BlockBuilder } from '@nomicfoundation/vm/dist/buildBlock'
 
 interface PendingBlockOpts {
   /* Config */

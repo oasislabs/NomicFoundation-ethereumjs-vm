@@ -1,5 +1,5 @@
-import { RLP } from '@ethereumjs/rlp'
-import { arrToBufArr, bufArrToArr, bufferToInt, intToBuffer } from '@ethereumjs/util'
+import { RLP } from '@nomicfoundation/rlp'
+import { arrToBufArr, bufArrToArr, bufferToInt, intToBuffer } from '@nomicfoundation/util'
 import * as pipe from 'it-pipe'
 import * as pushable from 'it-pushable'
 

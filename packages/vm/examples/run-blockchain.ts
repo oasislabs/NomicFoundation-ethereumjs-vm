@@ -6,10 +6,10 @@
 // 4. Puts the blocks from ../utils/blockchain-mock-data "blocks" attribute into the Blockchain
 // 5. Runs the Blockchain on the VM.
 
-import { Account, Address, toBuffer, setLengthLeft } from '@ethereumjs/util'
-import { Block } from '@ethereumjs/block'
-import { Blockchain } from '@ethereumjs/blockchain'
-import { Common, ConsensusType } from '@ethereumjs/common'
+import { Account, Address, toBuffer, setLengthLeft } from '@nomicfoundation/util'
+import { Block } from '@nomicfoundation/block'
+import { Blockchain } from '@nomicfoundation/blockchain'
+import { Common, ConsensusType } from '@nomicfoundation/common'
 import { VM } from '../'
 import { testData } from './helpers/blockchain-mock-data'
 

@@ -1,4 +1,4 @@
-import { Address } from '@ethereumjs/util'
+import { Address } from '@nomicfoundation/util'
 
 import type { PrecompileFunc } from './precompiles'
 

@@ -1,5 +1,5 @@
-import { Chain, Common, ConsensusAlgorithm, ConsensusType, Hardfork } from '@ethereumjs/common'
-import { RLP } from '@ethereumjs/rlp'
+import { Chain, Common, ConsensusAlgorithm, ConsensusType, Hardfork } from '@nomicfoundation/common'
+import { RLP } from '@nomicfoundation/rlp'
 import {
   Address,
   KECCAK256_RLP,
@@ -18,14 +18,14 @@ import {
   isTruthy,
   toType,
   zeros,
-} from '@ethereumjs/util'
+} from '@nomicfoundation/util'
 import { keccak256 } from 'ethereum-cryptography/keccak'
 
 import { CLIQUE_EXTRA_SEAL, CLIQUE_EXTRA_VANITY } from './clique'
 import { valuesArrayToHeaderData } from './helpers'
 
 import type { BlockHeaderBuffer, BlockOptions, HeaderData, JsonHeader } from './types'
-import type { CliqueConfig } from '@ethereumjs/common'
+import type { CliqueConfig } from '@nomicfoundation/common'
 
 interface HeaderCache {
   hash: Buffer | undefined

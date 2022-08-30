@@ -1,4 +1,4 @@
-import { RLP } from '@ethereumjs/rlp'
+import { RLP } from '@nomicfoundation/rlp'
 import {
   arrToBufArr,
   bigIntToBuffer,
@@ -6,15 +6,15 @@ import {
   bufferToBigInt,
   bufferToInt,
   intToBuffer,
-} from '@ethereumjs/util'
-import { Bloom } from '@ethereumjs/vm'
+} from '@nomicfoundation/util'
+import { Bloom } from '@nomicfoundation/vm'
 
 import { DBKey, MetaDBManager } from '../util/metaDBManager'
 
-import type { Block } from '@ethereumjs/block'
-import type { Log } from '@ethereumjs/evm'
-import type { TypedTransaction } from '@ethereumjs/tx'
-import type { PostByzantiumTxReceipt, PreByzantiumTxReceipt, TxReceipt } from '@ethereumjs/vm'
+import type { Block } from '@nomicfoundation/block'
+import type { Log } from '@nomicfoundation/evm'
+import type { TypedTransaction } from '@nomicfoundation/tx'
+import type { PostByzantiumTxReceipt, PreByzantiumTxReceipt, TxReceipt } from '@nomicfoundation/vm'
 
 /**
  * TxReceiptWithType extends TxReceipt to provide:

@@ -1,6 +1,6 @@
-import { Block, BlockHeader } from '@ethereumjs/block'
-import { Chain, Common, ConsensusAlgorithm, ConsensusType, Hardfork } from '@ethereumjs/common'
-import { isFalsy, isTruthy } from '@ethereumjs/util'
+import { Block, BlockHeader } from '@nomicfoundation/block'
+import { Chain, Common, ConsensusAlgorithm, ConsensusType, Hardfork } from '@nomicfoundation/common'
+import { isFalsy, isTruthy } from '@nomicfoundation/util'
 import { MemoryLevel } from 'memory-level'
 
 import { CasperConsensus, CliqueConsensus, EthashConsensus } from './consensus'
@@ -13,9 +13,9 @@ import { Lock } from './lock'
 import type { Consensus } from './consensus'
 import type { GenesisState } from './genesisStates'
 import type { BlockchainInterface, BlockchainOptions, OnBlock } from './types'
-import type { BlockData } from '@ethereumjs/block'
-import type { CliqueConfig } from '@ethereumjs/common'
-import type { BigIntLike } from '@ethereumjs/util'
+import type { BlockData } from '@nomicfoundation/block'
+import type { CliqueConfig } from '@nomicfoundation/common'
+import type { BigIntLike } from '@nomicfoundation/util'
 import type { AbstractLevel } from 'abstract-level'
 
 /**

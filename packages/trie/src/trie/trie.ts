@@ -1,4 +1,4 @@
-import { RLP_EMPTY_STRING, isFalsy, isTruthy } from '@ethereumjs/util'
+import { RLP_EMPTY_STRING, isFalsy, isTruthy } from '@nomicfoundation/util'
 import { keccak256 } from 'ethereum-cryptography/keccak'
 
 import { CheckpointDB, MapDB } from '../db'
@@ -30,7 +30,7 @@ interface Path {
 }
 
 /**
- * The basic trie interface, use with `import { Trie } from '@ethereumjs/trie'`.
+ * The basic trie interface, use with `import { Trie } from '@nomicfoundation/trie'`.
  * In Ethereum applications stick with the {@link SecureTrie} overlay.
  * The API for the base and the secure interface are about the same.
  */

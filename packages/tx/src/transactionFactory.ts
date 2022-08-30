@@ -1,4 +1,4 @@
-import { bufferToBigInt, toBuffer } from '@ethereumjs/util'
+import { bufferToBigInt, toBuffer } from '@nomicfoundation/util'
 
 import { FeeMarketEIP1559Transaction } from './eip1559Transaction'
 import { AccessListEIP2930Transaction } from './eip2930Transaction'

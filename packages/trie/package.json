@@ -1,5 +1,5 @@
 {
-  "name": "@ethereumjs/trie",
+  "name": "@nomicfoundation/trie",
   "version": "5.0.0-rc.1",
   "description": "This is an implementation of the modified merkle patricia tree as specified in Ethereum's yellow paper.",
   "keywords": [
@@ -36,7 +36,6 @@
     "lint": "../../config/cli/lint.sh",
     "lint:diff": "../../config/cli/lint-diff.sh",
     "lint:fix": "../../config/cli/lint-fix.sh",
-    "prepublishOnly": "../../config/cli/prepublish.sh",
     "profiling": "tsc --target ES5 benchmarks/random.ts && 0x benchmarks/random.js",
     "tape": "tape -r ts-node/register",
     "test": "npm run test:node && npm run test:browser",
@@ -45,8 +44,8 @@
     "tsc": "../../config/cli/ts-compile.sh"
   },
   "dependencies": {
-    "@ethereumjs/rlp": "4.0.0-rc.1",
-    "@ethereumjs/util": "8.0.0-rc.1",
+    "@nomicfoundation/rlp": "4.0.0-rc.1",
+    "@nomicfoundation/util": "8.0.0-rc.1",
     "ethereum-cryptography": "^1.1.2",
     "readable-stream": "^3.6.0"
   },

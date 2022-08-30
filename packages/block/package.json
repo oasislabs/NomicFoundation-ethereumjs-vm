@@ -1,5 +1,5 @@
 {
-  "name": "@ethereumjs/block",
+  "name": "@nomicfoundation/block",
   "version": "4.0.0-rc.1",
   "description": "Provides Block serialization and help functions",
   "keywords": [
@@ -30,7 +30,6 @@
     "lint": "../../config/cli/lint.sh",
     "lint:diff": "../../config/cli/lint-diff.sh",
     "lint:fix": "../../config/cli/lint-fix.sh",
-    "prepublishOnly": "../../config/cli/prepublish.sh",
     "tape": "tape -r ts-node/register",
     "test": "npm run test:node && npm run test:browser",
     "test:browser": "karma start karma.conf.js",
@@ -38,11 +37,11 @@
     "tsc": "../../config/cli/ts-compile.sh"
   },
   "dependencies": {
-    "@ethereumjs/common": "3.0.0-rc.1",
-    "@ethereumjs/rlp": "4.0.0-rc.1",
-    "@ethereumjs/trie": "5.0.0-rc.1",
-    "@ethereumjs/tx": "4.0.0-rc.1",
-    "@ethereumjs/util": "8.0.0-rc.1",
+    "@nomicfoundation/common": "3.0.0-rc.1",
+    "@nomicfoundation/rlp": "4.0.0-rc.1",
+    "@nomicfoundation/trie": "5.0.0-rc.1",
+    "@nomicfoundation/tx": "4.0.0-rc.1",
+    "@nomicfoundation/util": "8.0.0-rc.1",
     "ethereum-cryptography": "^1.1.2"
   },
   "devDependencies": {

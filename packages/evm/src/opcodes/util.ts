@@ -1,5 +1,5 @@
-import { Hardfork } from '@ethereumjs/common'
-import { bigIntToBuffer, setLengthLeft, setLengthRight } from '@ethereumjs/util'
+import { Hardfork } from '@nomicfoundation/common'
+import { bigIntToBuffer, setLengthLeft, setLengthRight } from '@nomicfoundation/util'
 import { keccak256 } from 'ethereum-cryptography/keccak'
 import { bytesToHex } from 'ethereum-cryptography/utils'
 
@@ -7,12 +7,12 @@ import { EvmError } from '../exceptions'
 
 import type { ERROR } from '../exceptions'
 import type { RunState } from '../interpreter'
-import type { Common } from '@ethereumjs/common'
+import type { Common } from '@nomicfoundation/common'
 
 const MASK_160 = (BigInt(1) << BigInt(160)) - BigInt(1)
 
 /**
- * Proxy function for @ethereumjs/util's setLengthLeft, except it returns a zero
+ * Proxy function for @nomicfoundation/util's setLengthLeft, except it returns a zero
  * length buffer in case the buffer is full of zeros.
  * @param value Buffer which we want to pad
  */

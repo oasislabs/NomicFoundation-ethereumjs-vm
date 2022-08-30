@@ -1,13 +1,13 @@
-import { Block, BlockHeader } from '@ethereumjs/block'
-import { RLP } from '@ethereumjs/rlp'
-import { arrToBufArr, bufferToBigInt, isFalsy, isTruthy } from '@ethereumjs/util'
+import { Block, BlockHeader } from '@nomicfoundation/block'
+import { RLP } from '@nomicfoundation/rlp'
+import { arrToBufArr, bufferToBigInt, isFalsy, isTruthy } from '@nomicfoundation/util'
 
 import { Cache } from './cache'
 import { DBOp, DBTarget } from './operation'
 
 import type { DBOpData, DatabaseKey } from './operation'
-import type { BlockBodyBuffer, BlockBuffer, BlockOptions } from '@ethereumjs/block'
-import type { Common } from '@ethereumjs/common'
+import type { BlockBodyBuffer, BlockBuffer, BlockOptions } from '@nomicfoundation/block'
+import type { Common } from '@nomicfoundation/common'
 import type { AbstractLevel } from 'abstract-level'
 
 class NotFoundError extends Error {

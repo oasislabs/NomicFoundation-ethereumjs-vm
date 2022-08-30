@@ -1,7 +1,7 @@
-import { isTruthy } from '@ethereumjs/util'
+import { isTruthy } from '@nomicfoundation/util'
 import level from 'level-mem'
 
-import type { BatchDBOp, DB } from '@ethereumjs/trie'
+import type { BatchDBOp, DB } from '@nomicfoundation/trie'
 import type { LevelUp } from 'levelup'
 
 const ENCODING_OPTS = { keyEncoding: 'binary', valueEncoding: 'binary' }

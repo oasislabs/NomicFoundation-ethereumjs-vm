@@ -1,4 +1,4 @@
-import { addHexPrefix, toBuffer } from '@ethereumjs/util'
+import { addHexPrefix, toBuffer } from '@nomicfoundation/util'
 import { keccak256 } from 'ethereum-cryptography/keccak'
 import { bytesToHex } from 'ethereum-cryptography/utils'
 

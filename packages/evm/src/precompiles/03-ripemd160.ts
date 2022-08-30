@@ -1,4 +1,4 @@
-import { isFalsy, setLengthLeft, toBuffer } from '@ethereumjs/util'
+import { isFalsy, setLengthLeft, toBuffer } from '@nomicfoundation/util'
 import { ripemd160 } from 'ethereum-cryptography/ripemd160'
 
 import { OOGResult } from '../evm'

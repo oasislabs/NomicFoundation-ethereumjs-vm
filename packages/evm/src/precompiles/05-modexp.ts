@@ -4,7 +4,7 @@ import {
   isFalsy,
   setLengthLeft,
   setLengthRight,
-} from '@ethereumjs/util'
+} from '@nomicfoundation/util'
 
 import { OOGResult } from '../evm'
 
@@ -138,7 +138,7 @@ export function precompile05(opts: PrecompileInput): ExecResult {
   }
 
   const maxInt = BigInt(Number.MAX_SAFE_INTEGER)
-  const maxSize = BigInt(2147483647) // @ethereumjs/util setLengthRight limitation
+  const maxSize = BigInt(2147483647) // @nomicfoundation/util setLengthRight limitation
 
   if (bLen > maxSize || eLen > maxSize || mLen > maxSize) {
     return OOGResult(opts.gasLimit)

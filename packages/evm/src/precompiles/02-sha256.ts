@@ -1,4 +1,4 @@
-import { isFalsy, toBuffer } from '@ethereumjs/util'
+import { isFalsy, toBuffer } from '@nomicfoundation/util'
 import { sha256 } from 'ethereum-cryptography/sha256'
 
 import { OOGResult } from '../evm'

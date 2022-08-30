@@ -1,5 +1,5 @@
-import { RLP } from '@ethereumjs/rlp'
-import { bufArrToArr, isFalsy, isTruthy } from '@ethereumjs/util'
+import { RLP } from '@nomicfoundation/rlp'
+import { bufArrToArr, isFalsy, isTruthy } from '@nomicfoundation/util'
 import * as crypto from 'crypto'
 import { debug as createDebugLogger } from 'debug'
 import { getPublicKey } from 'ethereum-cryptography/secp256k1'
