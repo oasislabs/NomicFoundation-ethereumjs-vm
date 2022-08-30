@@ -1,4 +1,4 @@
-import { isTruthy } from '@nomicfoundation/util'
+import { isTruthy } from '@nomicfoundation/ethereumjs-util'
 import { debug as createDebugLogger } from 'debug'
 import { EventEmitter } from 'events'
 import ms = require('ms')

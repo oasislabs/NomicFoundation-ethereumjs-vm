@@ -3,8 +3,8 @@ import {
   LES as Devp2pLES,
   RLPx as Devp2pRLPx,
   SNAP as Devp2pSNAP,
-} from '@nomicfoundation/devp2p'
-import { isTruthy } from '@nomicfoundation/util'
+} from '@nomicfoundation/ethereumjs-devp2p'
+import { isTruthy } from '@nomicfoundation/ethereumjs-util'
 import { randomBytes } from 'crypto'
 
 import { Event } from '../../types'
@@ -18,7 +18,7 @@ import type { PeerOptions } from './peer'
 import type {
   Capabilities as Devp2pCapabilities,
   Peer as Devp2pRlpxPeer,
-} from '@nomicfoundation/devp2p'
+} from '@nomicfoundation/ethereumjs-devp2p'
 const devp2pCapabilities: any = {
   snap1: Devp2pSNAP.snap,
   eth66: Devp2pETH.eth66,

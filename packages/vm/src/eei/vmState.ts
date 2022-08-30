@@ -1,11 +1,11 @@
-import { Chain, Common, Hardfork } from '@nomicfoundation/common'
-import { ripemdPrecompileAddress } from '@nomicfoundation/evm/dist/precompiles'
-import { Account, Address, isTruthy, toBuffer } from '@nomicfoundation/util'
+import { Chain, Common, Hardfork } from '@nomicfoundation/ethereumjs-common'
+import { ripemdPrecompileAddress } from '@nomicfoundation/ethereumjs-evm/dist/precompiles'
+import { Account, Address, isTruthy, toBuffer } from '@nomicfoundation/ethereumjs-util'
 import { debug as createDebugLogger } from 'debug'
 
-import type { EVMStateAccess } from '@nomicfoundation/evm/dist/types'
-import type { AccountFields, StateManager } from '@nomicfoundation/statemanager'
-import type { AccessList, AccessListItem } from '@nomicfoundation/tx'
+import type { EVMStateAccess } from '@nomicfoundation/ethereumjs-evm/dist/types'
+import type { AccountFields, StateManager } from '@nomicfoundation/ethereumjs-statemanager'
+import type { AccessList, AccessListItem } from '@nomicfoundation/ethereumjs-tx'
 import type { Debugger } from 'debug'
 
 type AddressHex = string
@@ -426,7 +426,7 @@ export class VmState implements EVMStateAccess {
    * @param addressesRemoved - List of addresses to be removed from the final list
    * @param addressesOnlyStorage - List of addresses only to be added in case of present storage slots
    *
-   * @returns - an [@nomicfoundation/tx](https://github.com/ethereumjs/ethereumjs-monorepo/packages/tx) `AccessList`
+   * @returns - an [@nomicfoundation/ethereumjs-tx](https://github.com/ethereumjs/ethereumjs-monorepo/packages/tx) `AccessList`
    */
   generateAccessList(
     addressesRemoved: Address[] = [],

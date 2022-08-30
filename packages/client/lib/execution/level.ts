@@ -1,8 +1,8 @@
 // eslint-disable-next-line implicit-dependencies/no-implicit
-import { isTruthy } from '@nomicfoundation/util'
+import { isTruthy } from '@nomicfoundation/ethereumjs-util'
 import { MemoryLevel } from 'memory-level'
 
-import type { BatchDBOp, DB } from '@nomicfoundation/trie'
+import type { BatchDBOp, DB } from '@nomicfoundation/ethereumjs-trie'
 import type { AbstractLevel } from 'abstract-level'
 
 export const ENCODING_OPTS = { keyEncoding: 'buffer', valueEncoding: 'buffer' }

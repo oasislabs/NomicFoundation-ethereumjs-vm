@@ -1,8 +1,8 @@
-import { Blockchain } from '@nomicfoundation/blockchain'
-import { Chain, Common } from '@nomicfoundation/common'
-import { EVM, getActivePrecompiles } from '@nomicfoundation/evm'
-import { DefaultStateManager } from '@nomicfoundation/statemanager'
-import { Account, Address, TypeOutput, isTruthy, toType } from '@nomicfoundation/util'
+import { Blockchain } from '@nomicfoundation/ethereumjs-blockchain'
+import { Chain, Common } from '@nomicfoundation/ethereumjs-common'
+import { EVM, getActivePrecompiles } from '@nomicfoundation/ethereumjs-evm'
+import { DefaultStateManager } from '@nomicfoundation/ethereumjs-statemanager'
+import { Account, Address, TypeOutput, isTruthy, toType } from '@nomicfoundation/ethereumjs-util'
 import AsyncEventEmitter = require('async-eventemitter')
 import { promisify } from 'util'
 
@@ -21,9 +21,9 @@ import type {
   VMEvents,
   VMOpts,
 } from './types'
-import type { BlockchainInterface } from '@nomicfoundation/blockchain'
-import type { EEIInterface, EVMInterface } from '@nomicfoundation/evm'
-import type { StateManager } from '@nomicfoundation/statemanager'
+import type { BlockchainInterface } from '@nomicfoundation/ethereumjs-blockchain'
+import type { EEIInterface, EVMInterface } from '@nomicfoundation/ethereumjs-evm'
+import type { StateManager } from '@nomicfoundation/ethereumjs-statemanager'
 
 /**
  * Execution engine which can be used to run a blockchain, individual

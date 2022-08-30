@@ -1,4 +1,4 @@
-import { isFalsy, isTruthy } from '@nomicfoundation/util'
+import { isFalsy, isTruthy } from '@nomicfoundation/ethereumjs-util'
 import { EventEmitter } from 'events'
 
 const DuplexPair = require('it-pair/duplex')

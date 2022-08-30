@@ -1,5 +1,5 @@
 {
-  "name": "@nomicfoundation/trie",
+  "name": "@nomicfoundation/ethereumjs-trie",
   "version": "5.0.0-rc.1",
   "description": "This is an implementation of the modified merkle patricia tree as specified in Ethereum's yellow paper.",
   "keywords": [
@@ -44,8 +44,8 @@
     "tsc": "../../config/cli/ts-compile.sh"
   },
   "dependencies": {
-    "@nomicfoundation/rlp": "4.0.0-rc.1",
-    "@nomicfoundation/util": "8.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-rlp": "4.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-util": "8.0.0-rc.1",
     "ethereum-cryptography": "^1.1.2",
     "readable-stream": "^3.6.0"
   },

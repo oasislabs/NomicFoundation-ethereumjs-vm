@@ -1,5 +1,5 @@
 {
-  "name": "@nomicfoundation/block",
+  "name": "@nomicfoundation/ethereumjs-block",
   "version": "4.0.0-rc.1",
   "description": "Provides Block serialization and help functions",
   "keywords": [
@@ -37,11 +37,11 @@
     "tsc": "../../config/cli/ts-compile.sh"
   },
   "dependencies": {
-    "@nomicfoundation/common": "3.0.0-rc.1",
-    "@nomicfoundation/rlp": "4.0.0-rc.1",
-    "@nomicfoundation/trie": "5.0.0-rc.1",
-    "@nomicfoundation/tx": "4.0.0-rc.1",
-    "@nomicfoundation/util": "8.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-common": "3.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-rlp": "4.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-trie": "5.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-tx": "4.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-util": "8.0.0-rc.1",
     "ethereum-cryptography": "^1.1.2"
   },
   "devDependencies": {

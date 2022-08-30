@@ -1,4 +1,4 @@
-import { ConsensusAlgorithm } from '@nomicfoundation/common'
+import { ConsensusAlgorithm } from '@nomicfoundation/ethereumjs-common'
 import {
   MAX_UINT64,
   bigIntToHex,
@@ -6,7 +6,7 @@ import {
   intToHex,
   isFalsy,
   isTruthy,
-} from '@nomicfoundation/util'
+} from '@nomicfoundation/ethereumjs-util'
 import { debug as createDebugLogger } from 'debug'
 
 import { EOF } from './eof'
@@ -19,8 +19,8 @@ import { Stack } from './stack'
 import type { EVM, EVMResult } from './evm'
 import type { AsyncOpHandler, OpHandler, Opcode } from './opcodes'
 import type { Block, EEIInterface, Log } from './types'
-import type { Common } from '@nomicfoundation/common'
-import type { Account, Address } from '@nomicfoundation/util'
+import type { Common } from '@nomicfoundation/ethereumjs-common'
+import type { Account, Address } from '@nomicfoundation/ethereumjs-util'
 
 const debugGas = createDebugLogger('evm:eei:gas')
 

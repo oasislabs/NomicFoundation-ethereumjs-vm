@@ -6,7 +6,7 @@ import type { Peer } from '../../net/peer'
 import type { FlowControl } from '../../net/protocol'
 import type { BlockFetcherOptions, JobTask } from './blockfetcherbase'
 import type { Job } from './types'
-import type { BlockHeader } from '@nomicfoundation/block'
+import type { BlockHeader } from '@nomicfoundation/ethereumjs-block'
 
 export interface HeaderFetcherOptions extends BlockFetcherOptions {
   /* Flow control manager */

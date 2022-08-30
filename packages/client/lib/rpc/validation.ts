@@ -1,4 +1,4 @@
-import { isFalsy, isTruthy } from '@nomicfoundation/util'
+import { isFalsy, isTruthy } from '@nomicfoundation/ethereumjs-util'
 
 import { INVALID_PARAMS } from './error-code'
 

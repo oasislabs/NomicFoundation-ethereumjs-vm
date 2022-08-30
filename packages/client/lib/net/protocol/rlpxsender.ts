@@ -4,7 +4,7 @@ import type {
   ETH as Devp2pETH,
   LES as Devp2pLES,
   SNAP as Devp2pSNAP,
-} from '@nomicfoundation/devp2p'
+} from '@nomicfoundation/ethereumjs-devp2p'
 
 /**
  * DevP2P/RLPx protocol sender
@@ -17,7 +17,7 @@ export class RlpxSender extends Sender {
 
   /**
    * Creates a new DevP2P/Rlpx protocol sender
-   * @param rlpxProtocol protocol object from @nomicfoundation/devp2p
+   * @param rlpxProtocol protocol object from @nomicfoundation/ethereumjs-devp2p
    */
   constructor(rlpxProtocol: Devp2pETH | Devp2pLES | Devp2pSNAP) {
     super()

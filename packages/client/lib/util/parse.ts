@@ -1,4 +1,4 @@
-import { Hardfork } from '@nomicfoundation/common'
+import { Hardfork } from '@nomicfoundation/ethereumjs-common'
 import {
   addHexPrefix,
   bigIntToHex,
@@ -7,13 +7,13 @@ import {
   isHexPrefixed,
   isTruthy,
   stripHexPrefix,
-} from '@nomicfoundation/util'
+} from '@nomicfoundation/ethereumjs-util'
 import { Multiaddr, multiaddr } from 'multiaddr'
 import { URL } from 'url'
 
 import type { MultiaddrLike } from '../types'
-import type { GenesisState } from '@nomicfoundation/blockchain/dist/genesisStates'
-import type { Common } from '@nomicfoundation/common'
+import type { GenesisState } from '@nomicfoundation/ethereumjs-blockchain/dist/genesisStates'
+import type { Common } from '@nomicfoundation/ethereumjs-common'
 
 /**
  * Parses multiaddrs and bootnodes to multiaddr format.

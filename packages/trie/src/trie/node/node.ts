@@ -1,5 +1,5 @@
-import { RLP } from '@nomicfoundation/rlp'
-import { bufArrToArr } from '@nomicfoundation/util'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
+import { bufArrToArr } from '@nomicfoundation/ethereumjs-util'
 
 import { addHexPrefix, removeHexPrefix } from '../../util/hex'
 import { nibblesToBuffer } from '../../util/nibbles'

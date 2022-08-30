@@ -1,10 +1,10 @@
-import { bigIntToBuffer, bufferToBigInt } from '@nomicfoundation/util'
+import { bigIntToBuffer, bufferToBigInt } from '@nomicfoundation/ethereumjs-util'
 
 import { Protocol } from './protocol'
 
 import type { Chain } from '../../blockchain'
 import type { Message, ProtocolOptions } from './protocol'
-import type { AccountData as AccountDataBody } from '@nomicfoundation/util'
+import type { AccountData as AccountDataBody } from '@nomicfoundation/ethereumjs-util'
 
 interface SnapProtocolOptions extends ProtocolOptions {
   /* Blockchain */

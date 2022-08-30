@@ -1,5 +1,5 @@
-import { Blockchain } from '@nomicfoundation/blockchain'
-import { Chain, Common } from '@nomicfoundation/common'
+import { Blockchain } from '@nomicfoundation/ethereumjs-blockchain'
+import { Chain, Common } from '@nomicfoundation/ethereumjs-common'
 import debug from 'debug'
 import { Level } from 'level'
 

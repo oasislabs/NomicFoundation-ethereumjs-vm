@@ -1,18 +1,18 @@
-import { ConsensusAlgorithm } from '@nomicfoundation/common'
-import { RLP } from '@nomicfoundation/rlp'
+import { ConsensusAlgorithm } from '@nomicfoundation/ethereumjs-common'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
 import {
   Address,
   arrToBufArr,
   bigIntToBuffer,
   bufArrToArr,
   bufferToBigInt,
-} from '@nomicfoundation/util'
+} from '@nomicfoundation/ethereumjs-util'
 import { debug as createDebugLogger } from 'debug'
 
 import type { Blockchain } from '..'
 import type { Consensus, ConsensusOptions } from './interface'
-import type { Block, BlockHeader } from '@nomicfoundation/block'
-import type { CliqueConfig } from '@nomicfoundation/common'
+import type { Block, BlockHeader } from '@nomicfoundation/ethereumjs-block'
+import type { CliqueConfig } from '@nomicfoundation/ethereumjs-common'
 
 const debug = createDebugLogger('blockchain:clique')
 

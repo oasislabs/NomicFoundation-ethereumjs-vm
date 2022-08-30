@@ -1,4 +1,4 @@
-import { isFalsy } from '@nomicfoundation/util'
+import { isFalsy } from '@nomicfoundation/ethereumjs-util'
 
 import { EvmErrorResult, OOGResult } from '../evm'
 import { ERROR, EvmError } from '../exceptions'

@@ -7,7 +7,7 @@ import { Event } from './types'
 
 import type { Config } from './config'
 import type { MultiaddrLike } from './types'
-import type { Blockchain } from '@nomicfoundation/blockchain'
+import type { Blockchain } from '@nomicfoundation/ethereumjs-blockchain'
 import type { AbstractLevel } from 'abstract-level'
 
 export interface EthereumClientOptions {

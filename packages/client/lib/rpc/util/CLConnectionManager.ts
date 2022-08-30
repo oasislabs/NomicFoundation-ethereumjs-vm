@@ -1,5 +1,5 @@
-import { Hardfork } from '@nomicfoundation/common'
-import { isTruthy } from '@nomicfoundation/util'
+import { Hardfork } from '@nomicfoundation/ethereumjs-common'
+import { isTruthy } from '@nomicfoundation/ethereumjs-util'
 
 import { Event } from '../../types'
 import { short, timeDiff } from '../../util'
@@ -11,7 +11,7 @@ import type {
   ForkchoiceStateV1,
   PayloadStatusV1,
 } from '../modules/engine'
-import type { Block } from '@nomicfoundation/block'
+import type { Block } from '@nomicfoundation/ethereumjs-block'
 
 export enum ConnectionStatus {
   Connected = 'connected',

@@ -1,11 +1,11 @@
-import { Block, BlockHeader } from '@nomicfoundation/block'
-import { Chain, Common, Hardfork } from '@nomicfoundation/common'
-import { RLP } from '@nomicfoundation/rlp'
+import { Block, BlockHeader } from '@nomicfoundation/ethereumjs-block'
+import { Chain, Common, Hardfork } from '@nomicfoundation/ethereumjs-common'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
 import {
   AccessListEIP2930Transaction,
   FeeMarketEIP1559Transaction,
   Transaction,
-} from '@nomicfoundation/tx'
+} from '@nomicfoundation/ethereumjs-tx'
 import {
   Account,
   Address,
@@ -18,13 +18,13 @@ import {
   setLengthLeft,
   stripHexPrefix,
   toBuffer,
-} from '@nomicfoundation/util'
+} from '@nomicfoundation/ethereumjs-util'
 import { keccak256 } from 'ethereum-cryptography/keccak'
 import { bytesToHex } from 'ethereum-cryptography/utils'
 
 import type { VmState } from '../src/eei/vmState'
-import type { BlockOptions } from '@nomicfoundation/block'
-import type { TxOptions } from '@nomicfoundation/tx'
+import type { BlockOptions } from '@nomicfoundation/ethereumjs-block'
+import type { TxOptions } from '@nomicfoundation/ethereumjs-tx'
 import type * as tape from 'tape'
 
 export function dumpState(state: any, cb: Function) {
@@ -110,7 +110,7 @@ export function format(a: any, toZero: boolean = false, isHex: boolean = false):
 /**
  * Make a tx using JSON from tests repo
  * @param {Object} txData The tx object from tests repo
- * @param {TxOptions} opts Tx opts that can include an @nomicfoundation/common object
+ * @param {TxOptions} opts Tx opts that can include an @nomicfoundation/ethereumjs-common object
  * @returns {FeeMarketEIP1559Transaction | AccessListEIP2930Transaction | Transaction} Transaction to be passed to VM.runTx function
  */
 export function makeTx(

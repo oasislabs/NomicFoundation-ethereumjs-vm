@@ -1,6 +1,6 @@
-import { Block } from '@nomicfoundation/block'
-import { Transaction } from '@nomicfoundation/tx'
-import { toBuffer } from '@nomicfoundation/util'
+import { Block } from '@nomicfoundation/ethereumjs-block'
+import { Transaction } from '@nomicfoundation/ethereumjs-tx'
+import { toBuffer } from '@nomicfoundation/ethereumjs-util'
 
 import { dummy } from './helpers'
 

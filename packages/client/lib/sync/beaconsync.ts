@@ -1,4 +1,4 @@
-import { isFalsy, isTruthy } from '@nomicfoundation/util'
+import { isFalsy, isTruthy } from '@nomicfoundation/ethereumjs-util'
 
 import { Event } from '../types'
 import { short } from '../util'
@@ -11,7 +11,7 @@ import type { VMExecution } from '../execution'
 import type { Peer } from '../net/peer/peer'
 import type { Skeleton } from './skeleton'
 import type { SynchronizerOptions } from './sync'
-import type { Block } from '@nomicfoundation/block'
+import type { Block } from '@nomicfoundation/ethereumjs-block'
 
 interface BeaconSynchronizerOptions extends SynchronizerOptions {
   /** Skeleton chain */

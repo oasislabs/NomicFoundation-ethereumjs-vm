@@ -1,5 +1,5 @@
 {
-  "name": "@nomicfoundation/tx",
+  "name": "@nomicfoundation/ethereumjs-tx",
   "version": "4.0.0-rc.1",
   "description": "A simple module for creating, manipulating and signing Ethereum transactions",
   "keywords": [
@@ -49,9 +49,9 @@
     "tsc": "../../config/cli/ts-compile.sh"
   },
   "dependencies": {
-    "@nomicfoundation/common": "3.0.0-rc.1",
-    "@nomicfoundation/rlp": "4.0.0-rc.1",
-    "@nomicfoundation/util": "8.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-common": "3.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-rlp": "4.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-util": "8.0.0-rc.1",
     "ethereum-cryptography": "^1.1.2"
   },
   "devDependencies": {

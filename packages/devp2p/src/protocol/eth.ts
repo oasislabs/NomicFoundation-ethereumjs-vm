@@ -1,4 +1,4 @@
-import { RLP } from '@nomicfoundation/rlp'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
 import {
   arrToBufArr,
   bigIntToBuffer,
@@ -6,7 +6,7 @@ import {
   bufferToBigInt,
   bufferToHex,
   isTruthy,
-} from '@nomicfoundation/util'
+} from '@nomicfoundation/ethereumjs-util'
 import * as snappy from 'snappyjs'
 
 import { assertEq, buffer2int, formatLogData, formatLogId, int2buffer } from '../util'

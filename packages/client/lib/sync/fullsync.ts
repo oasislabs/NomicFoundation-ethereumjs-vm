@@ -1,5 +1,5 @@
-import { Hardfork } from '@nomicfoundation/common'
-import { isFalsy, isTruthy } from '@nomicfoundation/util'
+import { Hardfork } from '@nomicfoundation/ethereumjs-common'
+import { isFalsy, isTruthy } from '@nomicfoundation/ethereumjs-util'
 
 import { Event } from '../types'
 import { short } from '../util'
@@ -11,7 +11,7 @@ import type { VMExecution } from '../execution'
 import type { Peer } from '../net/peer/peer'
 import type { TxPool } from '../service/txpool'
 import type { SynchronizerOptions } from './sync'
-import type { Block } from '@nomicfoundation/block'
+import type { Block } from '@nomicfoundation/ethereumjs-block'
 
 interface FullSynchronizerOptions extends SynchronizerOptions {
   /** Tx Pool */

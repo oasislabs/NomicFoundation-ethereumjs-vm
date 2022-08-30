@@ -1,8 +1,13 @@
 import type { FeeMarketEIP1559Transaction } from './eip1559Transaction'
 import type { AccessListEIP2930Transaction } from './eip2930Transaction'
 import type { Transaction } from './legacyTransaction'
-import type { Common } from '@nomicfoundation/common'
-import type { AddressLike, BigIntLike, BufferLike, PrefixedHexString } from '@nomicfoundation/util'
+import type { Common } from '@nomicfoundation/ethereumjs-common'
+import type {
+  AddressLike,
+  BigIntLike,
+  BufferLike,
+  PrefixedHexString,
+} from '@nomicfoundation/ethereumjs-util'
 
 /**
  * Can be used in conjunction with {@link Transaction.supports}

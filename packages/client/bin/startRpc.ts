@@ -1,4 +1,4 @@
-import { isFalsy, isTruthy } from '@nomicfoundation/util'
+import { isFalsy, isTruthy } from '@nomicfoundation/ethereumjs-util'
 import { readFileSync, writeFileSync } from 'fs'
 
 import { RPCManager, saveReceiptsMethods } from '../lib/rpc'

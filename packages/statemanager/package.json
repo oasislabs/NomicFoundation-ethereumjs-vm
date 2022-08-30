@@ -1,5 +1,5 @@
 {
-  "name": "@nomicfoundation/statemanager",
+  "name": "@nomicfoundation/ethereumjs-statemanager",
   "version": "1.0.0-rc.1",
   "description": "An Ethereum statemanager implementation",
   "keywords": [
@@ -40,10 +40,10 @@
     "tsc": "../../config/cli/ts-compile.sh"
   },
   "dependencies": {
-    "@nomicfoundation/common": "3.0.0-rc.1",
-    "@nomicfoundation/rlp": "4.0.0-rc.1",
-    "@nomicfoundation/trie": "5.0.0-rc.1",
-    "@nomicfoundation/util": "8.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-common": "3.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-rlp": "4.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-trie": "5.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-util": "8.0.0-rc.1",
     "debug": "^4.3.3",
     "ethereum-cryptography": "^1.1.2",
     "functional-red-black-tree": "^1.0.1"

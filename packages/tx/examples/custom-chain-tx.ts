@@ -1,5 +1,5 @@
-import { Address } from '@nomicfoundation/util'
-import { Common } from '@nomicfoundation/common'
+import { Address } from '@nomicfoundation/ethereumjs-util'
+import { Common } from '@nomicfoundation/ethereumjs-common'
 import { Transaction } from '../src'
 
 // In this example we create a transaction for a custom network.

@@ -1,6 +1,6 @@
-import { Hardfork } from '@nomicfoundation/common'
-import { isFalsy, isTruthy } from '@nomicfoundation/util'
-import { encodeReceipt } from '@nomicfoundation/vm/dist/runBlock'
+import { Hardfork } from '@nomicfoundation/ethereumjs-common'
+import { isFalsy, isTruthy } from '@nomicfoundation/ethereumjs-util'
+import { encodeReceipt } from '@nomicfoundation/ethereumjs-vm/dist/runBlock'
 
 import { VMExecution } from '../execution'
 import { Miner } from '../miner'
@@ -16,7 +16,7 @@ import { TxPool } from './txpool'
 import type { Peer } from '../net/peer/peer'
 import type { Protocol } from '../net/protocol'
 import type { EthereumServiceOptions } from './ethereumservice'
-import type { Block } from '@nomicfoundation/block'
+import type { Block } from '@nomicfoundation/ethereumjs-block'
 
 interface FullEthereumServiceOptions extends EthereumServiceOptions {
   /** Serve LES requests (default: false) */

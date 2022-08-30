@@ -1,5 +1,5 @@
-import { RLP } from '@nomicfoundation/rlp'
-import { arrToBufArr, bufArrToArr } from '@nomicfoundation/util'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
+import { arrToBufArr, bufArrToArr } from '@nomicfoundation/ethereumjs-util'
 import { base32, base64url } from '@scure/base'
 import { ecdsaVerify } from 'ethereum-cryptography/secp256k1-compat'
 import { Multiaddr } from 'multiaddr'

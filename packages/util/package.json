@@ -1,5 +1,5 @@
 {
-  "name": "@nomicfoundation/util",
+  "name": "@nomicfoundation/ethereumjs-util",
   "version": "8.0.0-rc.1",
   "description": "A collection of utility functions for Ethereum",
   "keywords": [
@@ -82,7 +82,7 @@
     "tsc": "../../config/cli/ts-compile.sh"
   },
   "dependencies": {
-    "@nomicfoundation/rlp": "^4.0.0-beta.2",
+    "@nomicfoundation/ethereumjs-rlp": "^4.0.0-beta.2",
     "ethereum-cryptography": "^1.1.2"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
-import { RLP } from '@nomicfoundation/rlp'
-import { arrToBufArr, isTruthy } from '@nomicfoundation/util'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
+import { arrToBufArr, isTruthy } from '@nomicfoundation/ethereumjs-util'
 import { debug as createDebugLogger } from 'debug'
 import { keccak256 as _keccak256 } from 'ethereum-cryptography/keccak'
 import { utils } from 'ethereum-cryptography/secp256k1'

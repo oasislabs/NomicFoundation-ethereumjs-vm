@@ -1,4 +1,4 @@
-import { intToBuffer } from '@nomicfoundation/util'
+import { intToBuffer } from '@nomicfoundation/ethereumjs-util'
 
 import type { Chain } from '../blockchain'
 import type { Config } from '../config'

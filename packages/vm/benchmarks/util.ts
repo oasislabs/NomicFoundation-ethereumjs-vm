@@ -1,7 +1,7 @@
-import { Account, Address, toBuffer } from '@nomicfoundation/util'
-import { Common } from '@nomicfoundation/common'
-import { Block } from '@nomicfoundation/block'
-import { StateManager, DefaultStateManager } from '@nomicfoundation/statemanager'
+import { Account, Address, toBuffer } from '@nomicfoundation/ethereumjs-util'
+import { Common } from '@nomicfoundation/ethereumjs-common'
+import { Block } from '@nomicfoundation/ethereumjs-block'
+import { StateManager, DefaultStateManager } from '@nomicfoundation/ethereumjs-statemanager'
 import { RunBlockResult } from '../dist/types'
 import { Mockchain } from './mockchain'
 

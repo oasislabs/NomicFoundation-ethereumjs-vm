@@ -1,5 +1,5 @@
-import { Block } from '@nomicfoundation/block'
-import { KECCAK256_RLP, KECCAK256_RLP_ARRAY, isFalsy } from '@nomicfoundation/util'
+import { Block } from '@nomicfoundation/ethereumjs-block'
+import { KECCAK256_RLP, KECCAK256_RLP_ARRAY, isFalsy } from '@nomicfoundation/ethereumjs-util'
 
 import { Event } from '../../types'
 
@@ -8,7 +8,7 @@ import { BlockFetcherBase } from './blockfetcherbase'
 import type { Peer } from '../../net/peer'
 import type { BlockFetcherOptions, JobTask } from './blockfetcherbase'
 import type { Job } from './types'
-import type { BlockBuffer } from '@nomicfoundation/block'
+import type { BlockBuffer } from '@nomicfoundation/ethereumjs-block'
 
 /**
  * Implements an eth/66 based block fetcher

@@ -5,7 +5,7 @@ import {
   publicToAddress,
   setLengthLeft,
   setLengthRight,
-} from '@nomicfoundation/util'
+} from '@nomicfoundation/ethereumjs-util'
 
 import { OOGResult } from '../evm'
 

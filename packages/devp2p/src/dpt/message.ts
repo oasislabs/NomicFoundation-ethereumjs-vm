@@ -1,5 +1,5 @@
-import { RLP } from '@nomicfoundation/rlp'
-import { bufArrToArr } from '@nomicfoundation/util'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
+import { bufArrToArr } from '@nomicfoundation/ethereumjs-util'
 import { debug as createDebugLogger } from 'debug'
 import { ecdsaRecover, ecdsaSign } from 'ethereum-cryptography/secp256k1-compat'
 import * as ip from 'ip'

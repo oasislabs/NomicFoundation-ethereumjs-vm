@@ -1,5 +1,5 @@
-import { Common } from '@nomicfoundation/common'
-import { isTruthy, toBuffer } from '@nomicfoundation/util'
+import { Common } from '@nomicfoundation/ethereumjs-common'
+import { isTruthy, toBuffer } from '@nomicfoundation/ethereumjs-util'
 import * as minimist from 'minimist'
 import * as tape from 'tape'
 

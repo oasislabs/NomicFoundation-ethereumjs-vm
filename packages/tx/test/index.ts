@@ -1,4 +1,4 @@
-import { isTruthy } from '@nomicfoundation/util'
+import { isTruthy } from '@nomicfoundation/ethereumjs-util'
 import * as minimist from 'minimist'
 
 const argv = minimist(process.argv.slice(2))

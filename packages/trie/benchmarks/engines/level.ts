@@ -1,5 +1,5 @@
 // eslint-disable-next-line implicit-dependencies/no-implicit
-import { isTruthy } from '@nomicfoundation/util'
+import { isTruthy } from '@nomicfoundation/ethereumjs-util'
 import { MemoryLevel } from 'memory-level'
 
 import type { BatchDBOp, DB } from '../../src/types'

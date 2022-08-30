@@ -1,6 +1,6 @@
-import { ConsensusType } from '@nomicfoundation/common'
-import { RLP } from '@nomicfoundation/rlp'
-import { Capability, Transaction, TransactionFactory } from '@nomicfoundation/tx'
+import { ConsensusType } from '@nomicfoundation/ethereumjs-common'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
+import { Capability, Transaction, TransactionFactory } from '@nomicfoundation/ethereumjs-tx'
 import {
   Address,
   TypeOutput,
@@ -12,7 +12,7 @@ import {
   setLengthLeft,
   toBuffer,
   toType,
-} from '@nomicfoundation/util'
+} from '@nomicfoundation/ethereumjs-util'
 
 import { INTERNAL_ERROR, INVALID_PARAMS, PARSE_ERROR } from '../error-code'
 import { middleware, validators } from '../validation'
@@ -23,17 +23,21 @@ import type { ReceiptsManager } from '../../execution/receipt'
 import type { EthProtocol } from '../../net/protocol'
 import type { EthereumService, FullEthereumService } from '../../service'
 import type { RpcTx } from '../types'
-import type { Block } from '@nomicfoundation/block'
-import type { Log } from '@nomicfoundation/evm'
-import type { Proof } from '@nomicfoundation/statemanager'
-import type { FeeMarketEIP1559Transaction, JsonTx, TypedTransaction } from '@nomicfoundation/tx'
-import type { Account } from '@nomicfoundation/util'
+import type { Block } from '@nomicfoundation/ethereumjs-block'
+import type { Log } from '@nomicfoundation/ethereumjs-evm'
+import type { Proof } from '@nomicfoundation/ethereumjs-statemanager'
+import type {
+  FeeMarketEIP1559Transaction,
+  JsonTx,
+  TypedTransaction,
+} from '@nomicfoundation/ethereumjs-tx'
+import type { Account } from '@nomicfoundation/ethereumjs-util'
 import type {
   PostByzantiumTxReceipt,
   PreByzantiumTxReceipt,
   TxReceipt,
   VM,
-} from '@nomicfoundation/vm'
+} from '@nomicfoundation/ethereumjs-vm'
 
 type GetLogsParams = {
   fromBlock?: string // QUANTITY, block number or "earliest" or "latest" (default: "latest")

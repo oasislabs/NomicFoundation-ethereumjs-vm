@@ -1,7 +1,7 @@
-import { Block, BlockHeader } from '@nomicfoundation/block'
-import { Chain, Common, Hardfork } from '@nomicfoundation/common'
-import { RLP } from '@nomicfoundation/rlp'
-import { bufArrToArr, isTruthy, toBuffer } from '@nomicfoundation/util'
+import { Block, BlockHeader } from '@nomicfoundation/ethereumjs-block'
+import { Chain, Common, Hardfork } from '@nomicfoundation/ethereumjs-common'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
+import { bufArrToArr, isTruthy, toBuffer } from '@nomicfoundation/ethereumjs-util'
 import { keccak256 } from 'ethereum-cryptography/keccak'
 import { MemoryLevel } from 'memory-level'
 

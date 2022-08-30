@@ -1,5 +1,5 @@
-import { RLP, utils } from '@nomicfoundation/rlp'
-import { isTruthy } from '@nomicfoundation/util'
+import { RLP, utils } from '@nomicfoundation/ethereumjs-rlp'
+import { isTruthy } from '@nomicfoundation/ethereumjs-util'
 import * as snappy from 'snappyjs'
 
 import { formatLogData } from '../util'

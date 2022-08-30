@@ -1,4 +1,4 @@
-import { isTruthy } from '@nomicfoundation/util'
+import { isTruthy } from '@nomicfoundation/ethereumjs-util'
 import { json as jsonParser } from 'body-parser'
 import * as Connect from 'connect'
 import * as cors from 'cors'

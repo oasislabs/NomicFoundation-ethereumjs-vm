@@ -1,4 +1,4 @@
-import { isFalsy, isTruthy } from '@nomicfoundation/util'
+import { isFalsy, isTruthy } from '@nomicfoundation/ethereumjs-util'
 import { debug as createDebugLogger } from 'debug'
 import { getPublicKey } from 'ethereum-cryptography/secp256k1'
 import { EventEmitter } from 'events'
@@ -13,7 +13,7 @@ import { DISCONNECT_REASONS, Peer } from './peer'
 
 import type { DPT, PeerInfo } from '../dpt'
 import type { Capabilities } from './peer'
-import type { Common } from '@nomicfoundation/common'
+import type { Common } from '@nomicfoundation/ethereumjs-common'
 import type { Debugger } from 'debug'
 
 // note: relative path only valid in .js file in dist

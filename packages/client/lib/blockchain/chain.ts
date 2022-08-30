@@ -1,6 +1,6 @@
-import { Block, BlockHeader } from '@nomicfoundation/block'
-import { Blockchain } from '@nomicfoundation/blockchain'
-import { ConsensusAlgorithm, Hardfork } from '@nomicfoundation/common'
+import { Block, BlockHeader } from '@nomicfoundation/ethereumjs-block'
+import { Blockchain } from '@nomicfoundation/ethereumjs-blockchain'
+import { ConsensusAlgorithm, Hardfork } from '@nomicfoundation/ethereumjs-common'
 
 import { Event } from '../types'
 

@@ -1,5 +1,5 @@
-import { Block, BlockHeader } from '@nomicfoundation/block'
-import { RLP } from '@nomicfoundation/rlp'
+import { Block, BlockHeader } from '@nomicfoundation/ethereumjs-block'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
 import {
   TWO_POW256,
   bigIntToBuffer,
@@ -9,7 +9,7 @@ import {
   isTruthy,
   setLengthLeft,
   zeros,
-} from '@nomicfoundation/util'
+} from '@nomicfoundation/ethereumjs-util'
 import { keccak256, keccak512 } from 'ethereum-cryptography/keccak'
 
 import {
@@ -23,7 +23,7 @@ import {
   params,
 } from './util'
 
-import type { BlockData, HeaderData } from '@nomicfoundation/block'
+import type { BlockData, HeaderData } from '@nomicfoundation/ethereumjs-block'
 import type { AbstractLevel } from 'abstract-level'
 
 function xor(a: Buffer, b: Buffer) {

@@ -1,5 +1,5 @@
-import { Chain, Common } from '@nomicfoundation/common'
-import { isTruthy } from '@nomicfoundation/util'
+import { Chain, Common } from '@nomicfoundation/ethereumjs-common'
+import { isTruthy } from '@nomicfoundation/ethereumjs-util'
 import chalk from 'chalk'
 
 import { DPT } from '../src/index'

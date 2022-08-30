@@ -1,16 +1,16 @@
-import { Block } from '@nomicfoundation/block'
-import { ConsensusType } from '@nomicfoundation/common'
-import { RLP } from '@nomicfoundation/rlp'
-import { Trie } from '@nomicfoundation/trie'
-import { Address, TypeOutput, isTruthy, toBuffer, toType } from '@nomicfoundation/util'
+import { Block } from '@nomicfoundation/ethereumjs-block'
+import { ConsensusType } from '@nomicfoundation/ethereumjs-common'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
+import { Trie } from '@nomicfoundation/ethereumjs-trie'
+import { Address, TypeOutput, isTruthy, toBuffer, toType } from '@nomicfoundation/ethereumjs-util'
 
 import { Bloom } from './bloom'
 import { calculateMinerReward, encodeReceipt, rewardAccount } from './runBlock'
 
 import type { BuildBlockOpts, BuilderOpts, RunTxResult, SealBlockOpts } from './types'
 import type { VM } from './vm'
-import type { HeaderData } from '@nomicfoundation/block'
-import type { TypedTransaction } from '@nomicfoundation/tx'
+import type { HeaderData } from '@nomicfoundation/ethereumjs-block'
+import type { TypedTransaction } from '@nomicfoundation/ethereumjs-tx'
 
 export class BlockBuilder {
   /**

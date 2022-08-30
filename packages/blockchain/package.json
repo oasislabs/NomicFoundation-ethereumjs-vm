@@ -1,5 +1,5 @@
 {
-  "name": "@nomicfoundation/blockchain",
+  "name": "@nomicfoundation/ethereumjs-blockchain",
   "version": "6.0.0-rc.1",
   "description": "A module to store and interact with blocks",
   "keywords": [
@@ -37,12 +37,12 @@
     "tsc": "../../config/cli/ts-compile.sh"
   },
   "dependencies": {
-    "@nomicfoundation/block": "4.0.0-rc.1",
-    "@nomicfoundation/common": "3.0.0-rc.1",
-    "@nomicfoundation/ethash": "2.0.0-rc.1",
-    "@nomicfoundation/rlp": "4.0.0-rc.1",
-    "@nomicfoundation/trie": "5.0.0-rc.1",
-    "@nomicfoundation/util": "8.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-block": "4.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-common": "3.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-ethash": "2.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-rlp": "4.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-trie": "5.0.0-rc.1",
+    "@nomicfoundation/ethereumjs-util": "8.0.0-rc.1",
     "abstract-level": "^1.0.3",
     "debug": "^4.3.3",
     "ethereum-cryptography": "^1.1.2",

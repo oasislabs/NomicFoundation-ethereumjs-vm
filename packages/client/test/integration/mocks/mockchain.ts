@@ -1,5 +1,5 @@
-import { Block } from '@nomicfoundation/block'
-import { Hardfork } from '@nomicfoundation/common'
+import { Block } from '@nomicfoundation/ethereumjs-block'
+import { Hardfork } from '@nomicfoundation/ethereumjs-common'
 
 import { Chain } from '../../../lib/blockchain'
 

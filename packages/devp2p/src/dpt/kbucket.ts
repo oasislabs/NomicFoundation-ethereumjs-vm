@@ -1,4 +1,4 @@
-import { isTruthy } from '@nomicfoundation/util'
+import { isTruthy } from '@nomicfoundation/ethereumjs-util'
 import { EventEmitter } from 'events'
 import _KBucket = require('k-bucket')
 

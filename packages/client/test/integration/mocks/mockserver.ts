@@ -1,4 +1,4 @@
-import { isTruthy } from '@nomicfoundation/util'
+import { isTruthy } from '@nomicfoundation/ethereumjs-util'
 
 import { Server } from '../../../lib/net/server'
 import { Event } from '../../../lib/types'

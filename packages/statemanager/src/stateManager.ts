@@ -1,5 +1,5 @@
-import { RLP } from '@nomicfoundation/rlp'
-import { Trie } from '@nomicfoundation/trie'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
+import { Trie } from '@nomicfoundation/ethereumjs-trie'
 import {
   Account,
   KECCAK256_NULL,
@@ -12,7 +12,7 @@ import {
   short,
   toBuffer,
   unpadBuffer,
-} from '@nomicfoundation/util'
+} from '@nomicfoundation/ethereumjs-util'
 import { keccak256 } from 'ethereum-cryptography/keccak'
 
 import { BaseStateManager } from './baseStateManager'
@@ -20,7 +20,7 @@ import { Cache } from './cache'
 
 import type { getCb, putCb } from './cache'
 import type { StateManager, StorageDump } from './interface'
-import type { Address, PrefixedHexString } from '@nomicfoundation/util'
+import type { Address, PrefixedHexString } from '@nomicfoundation/ethereumjs-util'
 
 type StorageProof = {
   key: PrefixedHexString
@@ -73,7 +73,7 @@ export interface DefaultStateManagerOpts {
  * and storage slots.
  *
  * The default state manager implementation uses a
- * `@nomicfoundation/trie` trie as a data backend.
+ * `@nomicfoundation/ethereumjs-trie` trie as a data backend.
  */
 export class DefaultStateManager extends BaseStateManager implements StateManager {
   _trie: Trie

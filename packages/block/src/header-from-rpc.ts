@@ -1,4 +1,4 @@
-import { isTruthy } from '@nomicfoundation/util'
+import { isTruthy } from '@nomicfoundation/ethereumjs-util'
 
 import { BlockHeader } from './header'
 import { numberToHex } from './helpers'

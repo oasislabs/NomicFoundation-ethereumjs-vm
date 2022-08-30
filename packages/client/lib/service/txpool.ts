@@ -1,19 +1,19 @@
-import { Capability } from '@nomicfoundation/tx'
-import { Address, bufferToHex, isFalsy, isTruthy } from '@nomicfoundation/util'
+import { Capability } from '@nomicfoundation/ethereumjs-tx'
+import { Address, bufferToHex, isFalsy, isTruthy } from '@nomicfoundation/ethereumjs-util'
 import Heap = require('qheap')
 
 import type { Config } from '../config'
 import type { Peer } from '../net/peer'
 import type { PeerPool } from '../net/peerpool'
 import type { FullEthereumService } from './fullethereumservice'
-import type { Block } from '@nomicfoundation/block'
+import type { Block } from '@nomicfoundation/ethereumjs-block'
 import type {
   AccessListEIP2930Transaction,
   FeeMarketEIP1559Transaction,
   Transaction,
   TypedTransaction,
-} from '@nomicfoundation/tx'
-import type { VM } from '@nomicfoundation/vm'
+} from '@nomicfoundation/ethereumjs-tx'
+import type { VM } from '@nomicfoundation/ethereumjs-vm'
 
 // Configuration constants
 const MIN_GAS_PRICE_BUMP_PERCENT = 10

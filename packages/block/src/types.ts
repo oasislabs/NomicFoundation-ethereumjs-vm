@@ -1,12 +1,12 @@
 import type { BlockHeader } from './header'
-import type { Common } from '@nomicfoundation/common'
+import type { Common } from '@nomicfoundation/ethereumjs-common'
 import type {
   AccessListEIP2930TxData,
   FeeMarketEIP1559TxData,
   JsonTx,
   TxData,
-} from '@nomicfoundation/tx'
-import type { AddressLike, BigIntLike, BufferLike } from '@nomicfoundation/util'
+} from '@nomicfoundation/ethereumjs-tx'
+import type { AddressLike, BigIntLike, BufferLike } from '@nomicfoundation/ethereumjs-util'
 /**
  * An object to set to which blockchain the blocks and their headers belong. This could be specified
  * using a {@link Common} object, or `chain` and `hardfork`. Defaults to mainnet without specifying a

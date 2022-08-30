@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { Blockchain } from '@nomicfoundation/blockchain'
-import { Chain, Common, ConsensusAlgorithm, Hardfork } from '@nomicfoundation/common'
-import { Address, isFalsy, isTruthy, toBuffer } from '@nomicfoundation/util'
+import { Blockchain } from '@nomicfoundation/ethereumjs-blockchain'
+import { Chain, Common, ConsensusAlgorithm, Hardfork } from '@nomicfoundation/ethereumjs-common'
+import { Address, isFalsy, isTruthy, toBuffer } from '@nomicfoundation/ethereumjs-util'
 import { randomBytes } from 'crypto'
 import { existsSync } from 'fs'
 import { ensureDirSync, readFileSync, removeSync } from 'fs-extra'
@@ -25,7 +25,7 @@ import { helprpc, startRPCServers } from './startRpc'
 
 import type { Logger } from '../lib/logging'
 import type { FullEthereumService } from '../lib/service'
-import type { GenesisState } from '@nomicfoundation/blockchain/dist/genesisStates'
+import type { GenesisState } from '@nomicfoundation/ethereumjs-blockchain/dist/genesisStates'
 import type { AbstractLevel } from 'abstract-level'
 
 const { hideBin } = require('yargs/helpers')
@@ -63,11 +63,12 @@ const args = yargs(hideBin(process.argv))
     default: `${homedir()}/Library/Ethereum/ethereumjs`,
   })
   .option('customChain', {
-    describe: 'Path to custom chain parameters json file (@nomicfoundation/common format)',
+    describe:
+      'Path to custom chain parameters json file (@nomicfoundation/ethereumjs-common format)',
     coerce: (arg: string) => (arg ? path.resolve(arg) : undefined),
   })
   .option('customGenesisState', {
-    describe: 'Path to custom genesis state json file (@nomicfoundation/common format)',
+    describe: 'Path to custom genesis state json file (@nomicfoundation/ethereumjs-common format)',
     coerce: (arg: string) => (arg ? path.resolve(arg) : undefined),
   })
   .option('gethGenesis', {

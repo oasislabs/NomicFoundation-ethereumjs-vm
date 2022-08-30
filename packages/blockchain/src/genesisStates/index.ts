@@ -1,9 +1,15 @@
-import { RLP } from '@nomicfoundation/rlp'
-import { Trie } from '@nomicfoundation/trie'
-import { Account, isHexPrefixed, isTruthy, toBuffer, unpadBuffer } from '@nomicfoundation/util'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
+import { Trie } from '@nomicfoundation/ethereumjs-trie'
+import {
+  Account,
+  isHexPrefixed,
+  isTruthy,
+  toBuffer,
+  unpadBuffer,
+} from '@nomicfoundation/ethereumjs-util'
 import { keccak256 } from 'ethereum-cryptography/keccak'
 
-import type { PrefixedHexString } from '@nomicfoundation/util'
+import type { PrefixedHexString } from '@nomicfoundation/ethereumjs-util'
 
 export type StoragePair = [key: PrefixedHexString, value: PrefixedHexString]
 

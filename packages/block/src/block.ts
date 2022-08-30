@@ -1,26 +1,26 @@
-import { ConsensusType } from '@nomicfoundation/common'
-import { RLP } from '@nomicfoundation/rlp'
-import { Trie } from '@nomicfoundation/trie'
-import { Capability, TransactionFactory } from '@nomicfoundation/tx'
+import { ConsensusType } from '@nomicfoundation/ethereumjs-common'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
+import { Trie } from '@nomicfoundation/ethereumjs-trie'
+import { Capability, TransactionFactory } from '@nomicfoundation/ethereumjs-tx'
 import {
   KECCAK256_RLP,
   arrToBufArr,
   bufArrToArr,
   bufferToHex,
   isTruthy,
-} from '@nomicfoundation/util'
+} from '@nomicfoundation/ethereumjs-util'
 import { keccak256 } from 'ethereum-cryptography/keccak'
 
 import { BlockHeader } from './header'
 
 import type { BlockBuffer, BlockData, BlockOptions, JsonBlock } from './types'
-import type { Common } from '@nomicfoundation/common'
+import type { Common } from '@nomicfoundation/ethereumjs-common'
 import type {
   FeeMarketEIP1559Transaction,
   Transaction,
   TxOptions,
   TypedTransaction,
-} from '@nomicfoundation/tx'
+} from '@nomicfoundation/ethereumjs-tx'
 
 /**
  * An object that represents the block.

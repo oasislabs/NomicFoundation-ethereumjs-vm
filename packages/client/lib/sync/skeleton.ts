@@ -1,13 +1,13 @@
-import { Block } from '@nomicfoundation/block'
-import { Hardfork } from '@nomicfoundation/common'
-import { RLP } from '@nomicfoundation/rlp'
-import { arrToBufArr, bigIntToBuffer, bufferToBigInt } from '@nomicfoundation/util'
+import { Block } from '@nomicfoundation/ethereumjs-block'
+import { Hardfork } from '@nomicfoundation/ethereumjs-common'
+import { RLP } from '@nomicfoundation/ethereumjs-rlp'
+import { arrToBufArr, bigIntToBuffer, bufferToBigInt } from '@nomicfoundation/ethereumjs-util'
 
 import { short, timeDuration } from '../util'
 import { DBKey, MetaDBManager } from '../util/metaDBManager'
 
 import type { MetaDBManagerOptions } from '../util/metaDBManager'
-import type { BigIntLike } from '@nomicfoundation/util'
+import type { BigIntLike } from '@nomicfoundation/ethereumjs-util'
 
 // Thanks to go-ethereum for the skeleton design
 
