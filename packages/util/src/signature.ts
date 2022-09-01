@@ -1,5 +1,6 @@
 import { keccak256 } from 'ethereum-cryptography/keccak'
-import { recoverPublicKey, signSync } from 'ethereum-cryptography/secp256k1'
+import { signSync } from 'ethereum-cryptography/secp256k1'
+import { ecdsaRecover, publicKeyConvert } from 'secp256k1'
 
 import { bufferToBigInt, bufferToHex, bufferToInt, setLengthLeft, toBuffer } from './bytes'
 import { SECP256K1_ORDER, SECP256K1_ORDER_DIV_2 } from './constants'
@@ -62,8 +63,8 @@ export const ecrecover = function (
     throw new Error('Invalid signature v value')
   }
 
-  const senderPubKey = recoverPublicKey(msgHash, signature, Number(recovery))
-  return Buffer.from(senderPubKey.slice(1))
+  const senderPubKey = ecdsaRecover(signature, Number(recovery), msgHash)
+  return Buffer.from(publicKeyConvert(senderPubKey, false).slice(1))
 }
 
 /**
