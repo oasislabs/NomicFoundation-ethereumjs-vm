@@ -1,4 +1,4 @@
-import { Chain, Common, Hardfork } from '@ethereumjs/common'
+import { Chain, Common, Hardfork } from '@nomicfoundation/ethereumjs-common'
 import {
   MAX_INTEGER,
   MAX_UINT64,
@@ -7,7 +7,7 @@ import {
   isTruthy,
   privateToPublic,
   toBuffer,
-} from '@ethereumjs/util'
+} from '@nomicfoundation/ethereumjs-util'
 import * as tape from 'tape'
 
 import {

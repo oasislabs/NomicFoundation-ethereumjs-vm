@@ -1,5 +1,4 @@
 import { Buffer } from 'buffer'
-import { CURVE } from 'ethereum-cryptography/secp256k1'
 
 /**
  * 2^64-1
@@ -18,8 +17,10 @@ export const MAX_INTEGER = BigInt(
  */
 export const MAX_INTEGER_BIGINT = BigInt(2) ** BigInt(256) - BigInt(1)
 
-export const SECP256K1_ORDER = CURVE.n
-export const SECP256K1_ORDER_DIV_2 = CURVE.n / BigInt(2)
+export const SECP256K1_ORDER = BigInt(
+  '0xfffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141'
+)
+export const SECP256K1_ORDER_DIV_2 = SECP256K1_ORDER / BigInt(2)
 
 /**
  * 2^256

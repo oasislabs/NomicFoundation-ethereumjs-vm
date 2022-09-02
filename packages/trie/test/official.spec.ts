@@ -1,4 +1,4 @@
-import { isTruthy } from '@ethereumjs/util'
+import { isTruthy } from '@nomicfoundation/ethereumjs-util'
 import * as tape from 'tape'
 
 import { Trie } from '../src'

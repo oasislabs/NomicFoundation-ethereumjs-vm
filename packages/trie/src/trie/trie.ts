@@ -1,4 +1,4 @@
-import { RLP_EMPTY_STRING, isFalsy, isTruthy } from '@nomicfoundation/ethereumjs-util'
+import { RLP_EMPTY_STRING, arrToBufArr, isFalsy, isTruthy } from '@nomicfoundation/ethereumjs-util'
 import { keccak256 } from 'ethereum-cryptography/keccak'
 
 import { CheckpointDB, MapDB } from '../db'
@@ -38,7 +38,7 @@ export class Trie {
   private readonly _opts: TrieOptsWithDefaults = {
     deleteFromDB: false,
     useKeyHashing: false,
-    useKeyHashingFunction: keccak256,
+    useKeyHashingFunction: (msg: Uint8Array) => keccak256(arrToBufArr(msg)),
     useRootPersistence: false,
   }
 
