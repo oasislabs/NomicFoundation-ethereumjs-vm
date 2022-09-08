@@ -1,6 +1,6 @@
 import { Chain, Common } from '@nomicfoundation/ethereumjs-common'
 import { DefaultStateManager } from '@nomicfoundation/ethereumjs-statemanager'
-import { Account, isTruthy } from '@nomicfoundation/ethereumjs-util'
+import { Account } from '@nomicfoundation/ethereumjs-util'
 import path from 'path'
 
 import { Blockchain } from '../../blockchain/src'
@@ -24,7 +24,7 @@ export function createAccount(nonce = BigInt(0), balance = BigInt(0xfff384)) {
  */
 export function isRunningInKarma(): boolean {
   // eslint-disable-next-line no-undef
-  return isTruthy((<any>globalThis).window?.__karma__)
+  return (<any>globalThis).window?.__karma__ !== undefined
 }
 
 /**

@@ -1,6 +1,8 @@
 import { Chain, Common, Hardfork } from '@nomicfoundation/ethereumjs-common'
 import { ERROR } from '@nomicfoundation/ethereumjs-evm/dist/exceptions'
-import { Address, bufferToBigInt, isTruthy } from '@nomicfoundation/ethereumjs-util'
+import { Chain, Common, Hardfork } from '@nomicfoundation/ethereumjs-common'
+import { ERROR } from '@nomicfoundation/ethereumjs-evm/dist/exceptions'
+import { Address, bufferToBigInt } from '@nomicfoundation/ethereumjs-util'
 import * as tape from 'tape'
 
 import { VM } from '../../../src/vm'
@@ -27,7 +29,7 @@ tape('Istanbul: EIP-1884', async (t) => {
       const common = new Common({ chain, hardfork })
       const vm = await VM.create({ common })
 
-      const balance = isTruthy(testCase.selfbalance) ? BigInt(testCase.selfbalance) : undefined
+      const balance = testCase.selfbalance !== undefined ? BigInt(testCase.selfbalance) : undefined
       const account = createAccount(BigInt(0), balance)
 
       await vm.stateManager.putAccount(addr, account)
