@@ -2,7 +2,10 @@ import { Block } from '@nomicfoundation/block'
 import { ConsensusType, Hardfork } from '@nomicfoundation/common'
 import { Capability } from '@nomicfoundation/tx'
 import { Address, KECCAK256_NULL, isFalsy, short, toBuffer } from '@nomicfoundation/util'
+import * as cbor from 'cborg'
 import { debug as createDebugLogger } from 'debug'
+import { sha512_256 } from 'js-sha512'
+import nacl = require('tweetnacl')
 
 import { Bloom } from './bloom'
 
@@ -25,6 +28,7 @@ import type {
 
 const debug = createDebugLogger('vm:tx')
 const debugGas = createDebugLogger('vm:tx:gas')
+const deoxysii = require('deoxysii')
 
 /**
  * @ignore
@@ -320,7 +324,27 @@ async function _runTx(this: VM, opts: RunTxOpts): Promise<RunTxResult> {
   /*
    * Execute message
    */
-  const { value, data, to } = tx
+  let { value, data, to } = tx
+
+  // Sapphire decode call data
+  let format, aead
+  if (this.confidential && data && data.length > 0) {
+    const { format, body: envelopBody } = cbor.decode(data)
+    if (format && format === 1) {
+      // X25519DeoxysII
+      const { nonce: deoxysiiNonce, data: envelopeData, pk } = envelopBody
+      const sharedKey = sha512_256.hmac
+        .create('MRAE_Box_Deoxys-II-256-128')
+        .update(nacl.scalarMult(this.secretKey, pk))
+        .arrayBuffer()
+      aead = new deoxysii.AEAD(new Uint8Array(sharedKey))
+      const { body } = cbor.decode(aead.decrypt(deoxysiiNonce, envelopeData))
+      data = Buffer.from(body.buffer)
+    } else {
+      // PLAIN
+      data = Buffer.from(envelopBody.buffer)
+    }
+  }
 
   if (this.DEBUG) {
     debug(
@@ -341,6 +365,25 @@ async function _runTx(this: VM, opts: RunTxOpts): Promise<RunTxResult> {
     value,
     data,
   })) as RunTxResult
+
+  if (this.confidential) {
+    // Sapphire encode call result
+    const callResult = { ok: results.execResult.returnValue }
+    let finalResult
+
+    if (format && format === 1) {
+      // X25519DeoxysII
+      const resultNonce = nacl.randomBytes(deoxysii.NonceSize)
+      const cipherText = aead.encrypt(resultNonce, cbor.encode(callResult))
+      finalResult = { unknown: { nonce: resultNonce, data: cipherText } }
+    } else {
+      // PLAIN
+      finalResult = callResult
+    }
+
+    const finalResultData = cbor.encode(finalResult)
+    results.execResult.returnValue = new Buffer(finalResultData.buffer)
+  }
 
   // After running the call, increment the nonce
   const acc = await state.getAccount(caller)

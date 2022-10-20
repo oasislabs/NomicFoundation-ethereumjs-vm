@@ -4,6 +4,7 @@ import { EVM, getActivePrecompiles } from '@nomicfoundation/evm'
 import { DefaultStateManager } from '@nomicfoundation/statemanager'
 import { Account, Address, TypeOutput, isTruthy, toType } from '@nomicfoundation/util'
 import AsyncEventEmitter = require('async-eventemitter')
+import nacl = require('tweetnacl')
 import { promisify } from 'util'
 
 import { buildBlock } from './buildBlock'
@@ -76,6 +77,13 @@ export class VM {
   readonly DEBUG: boolean = false
 
   /**
+   * Sapphire related params
+   */
+  readonly confidential: boolean = false
+  readonly publicKey: Uint8Array
+  readonly secretKey: Uint8Array
+
+  /**
    * VM async constructor. Creates engine instance and initializes it.
    *
    * @param opts VM engine constructor options
@@ -98,6 +106,14 @@ export class VM {
     this.events = new AsyncEventEmitter<VMEvents>()
 
     this._opts = opts
+
+    const keyPair = nacl.box.keyPair()
+    this.publicKey = keyPair.publicKey
+    this.secretKey = keyPair.secretKey
+
+    if (opts.confidential) {
+      this.confidential = true
+    }
 
     if (opts.common) {
       this._common = opts.common
