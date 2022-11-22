@@ -2,10 +2,9 @@ import { Block } from '@nomicfoundation/block'
 import { ConsensusType, Hardfork } from '@nomicfoundation/common'
 import { Capability } from '@nomicfoundation/tx'
 import { Address, KECCAK256_NULL, isFalsy, short, toBuffer } from '@nomicfoundation/util'
+import { cipher } from '@oasisprotocol/sapphire-paratime'
 import * as cbor from 'cborg'
 import { debug as createDebugLogger } from 'debug'
-import { sha512_256 } from 'js-sha512'
-import nacl = require('tweetnacl')
 
 import { Bloom } from './bloom'
 
@@ -28,7 +27,6 @@ import type {
 
 const debug = createDebugLogger('vm:tx')
 const debugGas = createDebugLogger('vm:tx:gas')
-const deoxysii = require('deoxysii')
 
 /**
  * @ignore
@@ -324,21 +322,18 @@ async function _runTx(this: VM, opts: RunTxOpts): Promise<RunTxResult> {
   /*
    * Execute message
    */
-  let { value, data, to } = tx
+  const { value, to } = tx
+  let { data } = tx
 
   // Sapphire decode call data
   let format, aead
-  if (this.confidential && data && data.length > 0) {
+  if (this.confidential && data !== null && data.length > 0) {
     const { format, body: envelopBody } = cbor.decode(data)
-    if (format && format === 1) {
+    if (format === 1) {
       // X25519DeoxysII
       const { nonce: deoxysiiNonce, data: envelopeData, pk } = envelopBody
-      const sharedKey = sha512_256.hmac
-        .create('MRAE_Box_Deoxys-II-256-128')
-        .update(nacl.scalarMult(this.secretKey, pk))
-        .arrayBuffer()
-      aead = new deoxysii.AEAD(new Uint8Array(sharedKey))
-      const { body } = cbor.decode(aead.decrypt(deoxysiiNonce, envelopeData))
+      aead = cipher.X25519DeoxysII.fromSecretKey(this.secretKey, pk)
+      const { body } = await aead.decryptCallData(deoxysiiNonce, envelopeData)
       data = Buffer.from(body.buffer)
     } else {
       // PLAIN
@@ -369,20 +364,17 @@ async function _runTx(this: VM, opts: RunTxOpts): Promise<RunTxResult> {
   if (this.confidential) {
     // Sapphire encode call result
     const callResult = { ok: results.execResult.returnValue }
-    let finalResult
+    let finalResult: Uint8Array
 
-    if (format && format === 1) {
+    if (format === 1 && aead !== null) {
       // X25519DeoxysII
-      const resultNonce = nacl.randomBytes(deoxysii.NonceSize)
-      const cipherText = aead.encrypt(resultNonce, cbor.encode(callResult))
-      finalResult = { unknown: { nonce: resultNonce, data: cipherText } }
+      finalResult = await aead.encryptCallResult(callResult)
     } else {
       // PLAIN
-      finalResult = callResult
+      finalResult = cbor.encode(callResult)
     }
 
-    const finalResultData = cbor.encode(finalResult)
-    results.execResult.returnValue = new Buffer(finalResultData.buffer)
+    results.execResult.returnValue = new Buffer(finalResult.buffer)
   }
 
   // After running the call, increment the nonce

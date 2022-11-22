@@ -111,9 +111,7 @@ export class VM {
     this.publicKey = keyPair.publicKey
     this.secretKey = keyPair.secretKey
 
-    if (opts.confidential) {
-      this.confidential = true
-    }
+    this.confidential = opts.confidential === true
 
     if (opts.common) {
       this._common = opts.common
