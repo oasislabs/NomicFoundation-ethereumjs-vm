@@ -64,7 +64,7 @@
     "@nomicfoundation/trie": "5.0.0-rc.1",
     "@nomicfoundation/tx": "4.0.0-rc.1",
     "@nomicfoundation/util": "8.0.0-rc.1",
-    "@oasisprotocol/sapphire-paratime": "^1.0.11",
+    "@oasisprotocol/sapphire-paratime": "^1.0.13",
     "@types/async-eventemitter": "^0.2.1",
     "async-eventemitter": "^0.2.4",
     "cborg": "^1.9.5",

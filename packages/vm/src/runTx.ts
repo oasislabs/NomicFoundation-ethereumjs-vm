@@ -327,17 +327,17 @@ async function _runTx(this: VM, opts: RunTxOpts): Promise<RunTxResult> {
 
   // Sapphire decode call data
   let format, aead
-  if (this.confidential && data !== null && data.length > 0) {
-    const { format, body: envelopBody } = cbor.decode(data)
+  if (this.confidential && (data?.length ?? 0) > 0) {
+    const { format, body: envelopeBody } = cbor.decode(data)
     if (format === 1) {
       // X25519DeoxysII
-      const { nonce: deoxysiiNonce, data: envelopeData, pk } = envelopBody
+      const { nonce: deoxysiiNonce, data: envelopeData, pk } = envelopeBody
       aead = cipher.X25519DeoxysII.fromSecretKey(this.secretKey, pk)
-      const { body } = await aead.decryptCallData(deoxysiiNonce, envelopeData)
-      data = Buffer.from(body.buffer)
+      const body = await aead.decryptCallData(deoxysiiNonce, envelopeData)
+      data = Buffer.from(body)
     } else {
       // PLAIN
-      data = Buffer.from(envelopBody.buffer)
+      data = Buffer.from(envelopeBody)
     }
   }
 
@@ -366,7 +366,7 @@ async function _runTx(this: VM, opts: RunTxOpts): Promise<RunTxResult> {
     const callResult = { ok: results.execResult.returnValue }
     let finalResult: Uint8Array
 
-    if (format === 1 && aead !== null) {
+    if (format === 1 && aead) {
       // X25519DeoxysII
       finalResult = await aead.encryptCallResult(callResult)
     } else {
