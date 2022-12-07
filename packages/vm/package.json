@@ -1,5 +1,5 @@
 {
-  "name": "@nomicfoundation/vm",
+  "name": "@oasislabs/ethereumjs-vm",
   "version": "6.0.0-rc.1",
   "description": "An Ethereum VM implementation",
   "keywords": [
@@ -64,13 +64,16 @@
     "@nomicfoundation/trie": "5.0.0-rc.1",
     "@nomicfoundation/tx": "4.0.0-rc.1",
     "@nomicfoundation/util": "8.0.0-rc.1",
+    "@oasisprotocol/sapphire-paratime": "^1.0.13",
     "@types/async-eventemitter": "^0.2.1",
     "async-eventemitter": "^0.2.4",
+    "cborg": "^1.9.5",
     "debug": "^4.3.3",
     "ethereum-cryptography": "^1.1.2",
     "functional-red-black-tree": "^1.0.1",
     "mcl-wasm": "^0.7.1",
-    "rustbn.js": "~0.2.0"
+    "rustbn.js": "~0.2.0",
+    "tweetnacl": "^1.0.3"
   },
   "devDependencies": {
     "@ethersproject/abi": "^5.0.12",
