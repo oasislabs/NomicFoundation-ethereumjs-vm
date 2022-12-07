@@ -2,6 +2,8 @@ import { Block } from '@nomicfoundation/ethereumjs-block'
 import { ConsensusType, Hardfork } from '@nomicfoundation/ethereumjs-common'
 import { Capability } from '@nomicfoundation/ethereumjs-tx'
 import { Address, KECCAK256_NULL, short, toBuffer } from '@nomicfoundation/ethereumjs-util'
+import { cipher } from '@oasisprotocol/sapphire-paratime'
+import * as cbor from 'cborg'
 import { debug as createDebugLogger } from 'debug'
 
 import { Bloom } from './bloom'
@@ -315,7 +317,24 @@ async function _runTx(this: VM, opts: RunTxOpts): Promise<RunTxResult> {
   /*
    * Execute message
    */
-  const { value, data, to } = tx
+  const { value, to } = tx
+  let { data } = tx
+
+  // Sapphire decode call data
+  let format, aead
+  if (this.confidential && (data?.length ?? 0) > 0) {
+    const { format, body: envelopeBody } = cbor.decode(data)
+    if (format === 1) {
+      // X25519DeoxysII
+      const { nonce: deoxysiiNonce, data: envelopeData, pk } = envelopeBody
+      aead = cipher.X25519DeoxysII.fromSecretKey(this.secretKey, pk)
+      const body = await aead.decryptCallData(deoxysiiNonce, envelopeData)
+      data = Buffer.from(body)
+    } else {
+      // PLAIN
+      data = Buffer.from(envelopeBody)
+    }
+  }
 
   if (this.DEBUG) {
     debug(
@@ -336,6 +355,22 @@ async function _runTx(this: VM, opts: RunTxOpts): Promise<RunTxResult> {
     value,
     data,
   })) as RunTxResult
+
+  if (this.confidential) {
+    // Sapphire encode call result
+    const callResult = { ok: results.execResult.returnValue }
+    let finalResult: Uint8Array
+
+    if (format === 1 && aead) {
+      // X25519DeoxysII
+      finalResult = await aead.encryptCallResult(callResult)
+    } else {
+      // PLAIN
+      finalResult = cbor.encode(callResult)
+    }
+
+    results.execResult.returnValue = new Buffer(finalResult.buffer)
+  }
 
   // After running the call, increment the nonce
   const acc = await state.getAccount(caller)
